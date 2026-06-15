@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1 id="greeting">Loading…</h1>
+    <script type="module">
+      const res = await fetch("__BACKEND_URL__/api/hello");
+      const { message } = await res.json();
+      document.getElementById("greeting").textContent = message;
+    </script>
+  </body>
+</html>

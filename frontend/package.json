@@ -1,0 +1,9 @@
+{
+  "name": "frontend",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot index.ts",
+    "start": "bun run index.ts"
+  }
+}
