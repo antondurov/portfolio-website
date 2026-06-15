@@ -11,7 +11,8 @@ Vercel: A platform for deploying frontend applications.
 ## Getting Started
 ### To get a local copy up and running, follow these steps:
 
-#### Clone the repository:
+Clone the repository:
+
 Navigate to the project directory:
 
 Install dependencies:
