@@ -27,7 +27,7 @@ Acceptance Criteria
 
 V App scaffolded with Vite + React
 
-Routing works for all 4 pages without full reloads
+V Routing works for all 4 pages without full reloads
 
 Project cards rendered from a single data source (projects.json)
 
