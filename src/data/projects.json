@@ -1,0 +1,24 @@
+[
+    {
+      "id": "project1",
+      "name": "Pomodoro App",
+      "description": "A minimalistic pomodoro focus app.",
+      "tags": ["React", "TypeScript", "Vite"],
+      "github": "///"
+    },
+    {
+      "id": "project2",
+      "name": "Project 2",
+      "description": "This is the second project.",
+      "tags": ["Tag1", "Tag2"],
+      "github": "///"
+    },
+    {
+      "id": "project3",
+      "name": "Project 3",
+      "description": "This is the third project.",
+      "status": "Not Started",
+      "tags": ["Tag1", "Tag2"],
+      "github": "///"
+    }
+  ]
