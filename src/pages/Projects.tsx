@@ -11,7 +11,10 @@ function Projects() {
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <p>{project.tags.join(", ")}</p>
-            <a href={project.github}>GitHub</a>
+            <a 
+              href={project.github}
+              target="_blank"
+              rel="noreferrer noopener">GitHub</a>
           </li>
         ))}
       </ul>
