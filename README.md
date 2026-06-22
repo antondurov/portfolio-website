@@ -18,12 +18,6 @@ To run this app, you'll need to have [Bun](https://bun.sh/) installed. Follow th
     bun install
     ```
 
-### Building the App
-Before running the application, you may need to build it. To build the app, run:
-```shell
-bun build
-```
-
 ### Running the App
 To start the application, run:
 ```shell
