@@ -1,0 +1,59 @@
+import { render, screen } from '@testing-library/react'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
+import Projects from './pages/Projects'
+import CV from './pages/CV'
+import { MemoryRouter } from 'react-router-dom'
+
+describe('App', () => {
+    it('renders Navbar', () => {
+        render(
+            <MemoryRouter>
+                <Navbar />
+            </MemoryRouter>
+        )
+        expect(screen.getByRole('navbar')).toBeInTheDocument()
+    })
+
+    it('renders all nav links', () => {
+        render(
+            <MemoryRouter>
+                <Navbar />
+            </MemoryRouter>
+        )
+        const links = screen.getAllByRole('link');
+        expect(links).toHaveLength(5)
+        expect(links[0]).toHaveTextContent('Home')
+        expect(links[1]).toHaveTextContent('About')
+        expect(links[2]).toHaveTextContent('Contact')
+        expect(links[3]).toHaveTextContent('Projects')
+        expect(links[4]).toHaveTextContent('CV')
+    })
+
+    it('renders Home page', () => {
+        render(<Home />)
+        expect(screen.getByText("Welcome to the Home Page")).toBeInTheDocument()
+    })
+    
+    it('renders About page', () => {
+        render(<About />)
+        expect(screen.getByText("About Me")).toBeInTheDocument()
+    })
+
+    it('renders Contact page', () => {
+        render(<Contact />)
+        expect(screen.getByText("Contact Me")).toBeInTheDocument()
+    })
+
+    it('renders Projects page', () => {
+        render(<Projects />)
+        expect(screen.getByText("Projects")).toBeInTheDocument()
+    })
+
+    it('renders CV page', () => {
+        render(<CV />)
+        expect(screen.getByText("Curriculum Vitae")).toBeInTheDocument()
+    })
+})
