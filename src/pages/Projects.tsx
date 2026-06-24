@@ -1,4 +1,4 @@
-import projects from "../data/projects.json";
+import { projects } from "../data/projects.ts";
 
 function Projects() {
   return (

@@ -1,4 +1,4 @@
-[
+export const projects = [
     {
       "id": "project1",
       "name": "Project 1",
