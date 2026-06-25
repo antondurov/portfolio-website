@@ -5,6 +5,7 @@ import Contact from '@/pages/Contact'
 import Navbar from '@/components/Navbar'
 import Projects from '@/pages/Projects'
 import CV from '@/pages/CV'
+import { projects } from '@/data/projects.ts'
 import '@/App.css'
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<Projects projects={projects} />} />
         <Route path="/cv" element={<CV />} />
       </Routes>
     </>

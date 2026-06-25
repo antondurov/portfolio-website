@@ -1,6 +1,10 @@
-import { projects } from "@/data/projects.ts";
+import type { Project } from "@/data/projects.ts";
 
-function Projects() {
+interface ProjectsProps {
+  projects: Project[];
+}
+
+function Projects({ projects: projects }: ProjectsProps) {
   return (
     <div>
       <h1>Projects</h1>

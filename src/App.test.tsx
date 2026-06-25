@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Projects from './pages/Projects'
 import CV from './pages/CV'
 import { MemoryRouter } from 'react-router-dom'
+import { projects } from './data/projects'
 
 describe('App', () => {
     it('renders Navbar', () => {
@@ -48,7 +49,7 @@ describe('App', () => {
     })
 
     it('renders Projects page', () => {
-        render(<Projects />)
+        render(<Projects projects={projects}/>)
         expect(screen.getByText("Projects")).toBeInTheDocument()
     })
 
