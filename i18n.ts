@@ -4,12 +4,13 @@ import { initReactI18next } from 'react-i18next'
 const resources = {
     en: {
         translation: {
-            "title": "My Portfolio TEST",
-            "welcome": "Welcome to my portfolio! TEST",
+            "title": "My Portfolio",
+            "welcome": "Welcome to my portfolio!",
             "about": "About me TEST",
-            "contact": "Contact me TEST",
-            "projects": "Projects TEST",
-            "cv": "CV TEST"
+            "contact": "Contact me",
+            "projects": "Projects",
+            "cv": "CV",
+            "not-found": "Page not found"
         }
     },
     ru: {
@@ -19,7 +20,8 @@ const resources = {
             "about": "Обо мне",
             "contact": "Контакты",
             "projects": "Проекты",
-            "cv": "Резюме"
+            "cv": "Резюме",
+            "not-found": "Страница не найдена"
         }
     },
     he: {
@@ -29,7 +31,8 @@ const resources = {
             "about": "עלי",
             "contact": "צור קשר",
             "projects": "פרויקטים",
-            "cv": "קורות חיים"
+            "cv": "קורות חיים",
+            "not-found": "דף לא נמצא"
         }
     }
 }

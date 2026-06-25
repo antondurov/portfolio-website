@@ -1,12 +1,14 @@
 import { render, screen } from '@testing-library/react'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Navbar from './components/Navbar'
-import Projects from './pages/Projects'
-import CV from './pages/CV'
+import Home from '@/pages/Home'
+import About from '@/pages/About'
+import Contact from '@/pages/Contact'
+import Navbar from '@/components/Navbar'
+import Projects from '@/pages/Projects'
+import CV from '@/pages/CV'
 import { MemoryRouter } from 'react-router-dom'
-import { projects } from './data/projects'
+import { projects } from '@/data/projects'
+import NotFound from '@/pages/NotFound'
+
 describe('App', () => {
 
     it('renders Navbar', () => {
@@ -35,26 +37,31 @@ describe('App', () => {
 
     it('renders Home page', () => {
         render(<Home />)
-        expect(screen.getByText("Welcome to the Home Page")).toBeInTheDocument()
+        expect(screen.getByText("welcome")).toBeInTheDocument()
     })
     
     it('renders About page', () => {
         render(<About />)
-        expect(screen.getByText("About me")).toBeInTheDocument()
+        expect(screen.getByText("about")).toBeInTheDocument()
     })
 
     it('renders Contact page', () => {
         render(<Contact />)
-        expect(screen.getByText("Contact Me")).toBeInTheDocument()
+        expect(screen.getByText("contact")).toBeInTheDocument()
     })
 
     it('renders Projects page', () => {
         render(<Projects projects={projects}/>)
-        expect(screen.getByText("Projects")).toBeInTheDocument()
+        expect(screen.getByText("projects")).toBeInTheDocument()
     })
 
     it('renders CV page', () => {
         render(<CV />)
-        expect(screen.getByText("Curriculum Vitae")).toBeInTheDocument()
+        expect(screen.getByText("cv")).toBeInTheDocument()
+    })
+
+    it('renders NotFound page', () => {
+        render(<NotFound />)
+        expect(screen.getByText("Page not found.")).toBeInTheDocument()
     })
 })
