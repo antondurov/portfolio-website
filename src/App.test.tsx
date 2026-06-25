@@ -7,8 +7,8 @@ import Projects from './pages/Projects'
 import CV from './pages/CV'
 import { MemoryRouter } from 'react-router-dom'
 import { projects } from './data/projects'
-
 describe('App', () => {
+
     it('renders Navbar', () => {
         render(
             <MemoryRouter>
@@ -40,7 +40,7 @@ describe('App', () => {
     
     it('renders About page', () => {
         render(<About />)
-        expect(screen.getByText("About Me")).toBeInTheDocument()
+        expect(screen.getByText("About me")).toBeInTheDocument()
     })
 
     it('renders Contact page', () => {

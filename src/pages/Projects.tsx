@@ -1,13 +1,16 @@
 import type { Project } from "@/data/projects.ts";
+import { useTranslation } from "react-i18next";
 
 interface ProjectsProps {
   projects: Project[];
 }
 
 function Projects({ projects: projects }: ProjectsProps) {
+  const { t } = useTranslation()
+
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>{t('projects')}</h1>
       <p>Here are some of my projects.</p>
       <ul>
         {projects.map((project) => (
