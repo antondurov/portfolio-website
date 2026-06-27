@@ -4,21 +4,12 @@
 ### Getting Started
 To run this app, you'll need to have [Bun](https://bun.sh/) installed. Follow the instructions on their website to set it up.
 
-### Installation
-1. Clone the repository:
-    ```shell
-    git clone https://github.com/yourusername/portfolio-website.git
-    ```
-2. Navigate to the project directory:
-    ```shell
-    cd portfolio-website
-    ```
-3. Install the dependencies using Bun:
-    ```shell
-    bun install
-    ```
-
 ### Running the App
+Install the dependencies using Bun:
+```shell
+bun install
+```
+
 To start the application, run:
 ```shell
 bun dev
