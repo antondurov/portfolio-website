@@ -5,7 +5,7 @@ import Contact from '@/pages/Contact'
 import Navbar from '@/components/Navbar'
 import Projects from '@/pages/Projects'
 import CV from '@/pages/CV'
-import { MemoryRouter } from 'react-router-dom'
+import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { projects } from '@/data/projects'
 import NotFound from '@/pages/NotFound'
 
@@ -60,15 +60,12 @@ describe('App', () => {
         expect(screen.getByText("cv")).toBeInTheDocument()
     })
 
-    it('renders NotFound page', () => {
-        render(<NotFound />)
-        expect(screen.getByText("Page not found.")).toBeInTheDocument()
-    })
-
     it('404 page is rendered for unknown routes', () => {
         render(
             <MemoryRouter initialEntries={['/unknown-route']}>
-                <NotFound />
+                <Routes>
+                    <Route path="*" element={<NotFound />}></Route>
+                </Routes>
             </MemoryRouter>
         )
         expect(screen.getByText("Page not found.")).toBeInTheDocument()
