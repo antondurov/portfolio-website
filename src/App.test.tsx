@@ -64,4 +64,13 @@ describe('App', () => {
         render(<NotFound />)
         expect(screen.getByText("Page not found.")).toBeInTheDocument()
     })
+
+    it('404 page is rendered for unknown routes', () => {
+        render(
+            <MemoryRouter initialEntries={['/unknown-route']}>
+                <NotFound />
+            </MemoryRouter>
+        )
+        expect(screen.getByText("Page not found.")).toBeInTheDocument()
+    })
 })
