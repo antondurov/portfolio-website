@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    padding: 1rem;
+}
+
+.navbar .navbar-page {
+    margin: 0 1rem; /* Add space between the links */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the current text color */
+}
