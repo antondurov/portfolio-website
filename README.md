@@ -19,6 +19,11 @@ bun dev
 bun run test
 ```
 
+### Git hooks
+```shell
+bun lefthook install
+```
+
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 

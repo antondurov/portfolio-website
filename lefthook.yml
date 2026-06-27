@@ -1,0 +1,12 @@
+pre-push:
+  parallel: true
+  jobs:
+    - run: bun run test:run
+
+pre-commit:
+  parallel: true
+  jobs:
+    - run: bun eslint {staged_files}
+      glob: "*.{js,ts,jsx,tsx}"
+
+    - run: bun run test:run
