@@ -14,6 +14,10 @@ To start the application, run:
 ```shell
 bun dev
 ```
+### Testing
+```shell
+bun run test
+```
 
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
