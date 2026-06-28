@@ -6,7 +6,9 @@ function Contact() {
   return (
     <div>
       <h1>{t('contact')}</h1>
-      <p>This is the contact page.</p>
+      <p>email: antondurov05@gmail.com</p>
+      <p>linkedIn: linkedin.com/in/anton-durov</p>
+      <p>instagram: @antvndurov</p>
     </div>
   );
 }

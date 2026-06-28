@@ -6,7 +6,21 @@ function About() {
   return (
     <div>
       <h1>{t('about')}</h1>
-      <p>This is the about page.</p>
+      <p>
+        My name is Anton, I'm 21 years old from israel.<br/>
+        I am a software developer and audio engineer. 
+        I have a passion for creating and building things.<br/>
+        I have been producing and writing music for over 7 years,
+        I had some experience in programming before I took the courses
+        CS50 and IBM Full Stack Software Developer.<br/>
+        {
+        /* TODO: Add anchor link for the certificates.
+           Also add more info later on. 
+        */
+        }
+        Currently working on a few personal projects 
+        and learning new technologies.
+      </p>
     </div>
   );
 }

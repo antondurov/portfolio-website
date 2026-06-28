@@ -5,7 +5,7 @@ const resources = {
     en: {
         translation: {
             "title": "My Portfolio",
-            "welcome": "Welcome to my portfolio!",
+            "welcome": "Anton Durov",
             "about": "About me",
             "contact": "Contact me",
             "projects": "Projects",

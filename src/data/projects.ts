@@ -9,23 +9,23 @@ export interface Project {
 export const projects: Project[] = [
     {
       "id": "project1",
-      "name": "Project 1",
-      "description": "This is the first project.",
-      "tags": ["React", "TypeScript", "Vite"],
-      "github": "///"
+      "name": "Simple Pomodoro App",
+      "description": "A minimalistic pomodor focus app built with react native + expo.",
+      "tags": ["React", "TypeScript", "Expo", "React Native"],
+      "github": "https://github.com/antondurov/pomodoro-app"
     },
     {
       "id": "project2",
-      "name": "Project 2",
-      "description": "This is the second project.",
-      "tags": ["Tag1", "Tag2"],
-      "github": "///"
+      "name": "Recipe Manager (In Progress)",
+      "description": "A minimalistic recipe manager app built with react native + expo.",
+      "tags": ["React", "Typescript", "Expo", "React Native"],
+      "github": "https://github.com/antondurov/recipe-manager"
     },
     {
-      "id": "project3",
-      "name": "Project 3",
-      "description": "This is the third project.",
-      "tags": ["Tag1", "Tag2"],
-      "github": "///"
+      "id": "Portofolio",
+      "name": "Portfolio",
+      "description": "The portfolio you are currently viewing, built with React + TypeScript + Vite.",
+      "tags": ["React", "TypeScript", "Vite", "React Router", "i18next"],
+      "github": "https://github.com/antondurov/portfolio-website"
     }
   ]
