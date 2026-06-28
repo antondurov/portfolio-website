@@ -10,7 +10,7 @@ export const projects: Project[] = [
     {
       "id": "project1",
       "name": "Simple Pomodoro App",
-      "description": "A minimalistic pomodor focus app built with react native + expo.",
+      "description": "A minimalistic pomodoro focus app built with react native + expo.",
       "tags": ["React", "TypeScript", "Expo", "React Native"],
       "github": "https://github.com/antondurov/pomodoro-app"
     },
