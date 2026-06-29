@@ -5,8 +5,7 @@ function Home() {
 
   return (
     <div>
-      <h1>{t('welcome')}</h1>
-      <p>Welcome to my portfolio!</p>
+      <h1 className="text-6xl font-bold text-center mt-8">{t('welcome')}</h1>
     </div>
   );
 }

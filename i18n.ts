@@ -5,12 +5,12 @@ const resources = {
     en: {
         translation: {
             "title": "My Portfolio",
-            "welcome": "Anton Durov",
+            "welcome": "Welcome to my portfolio.",
             "about": "About me",
             "contact": "Contact me",
             "projects": "Projects",
             "cv": "CV",
-            "not-found": "Page not found"
+            "not-found": "Page not found :("
         }
     },
     ru: {

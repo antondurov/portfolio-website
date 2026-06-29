@@ -68,6 +68,6 @@ describe('App', () => {
                 </Routes>
             </MemoryRouter>
         )
-        expect(screen.getByText("Page not found.")).toBeInTheDocument()
+        expect(screen.getByRole("not-found")).toBeInTheDocument()
     })
 })

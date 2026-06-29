@@ -10,15 +10,15 @@ function Projects({ projects: projects }: ProjectsProps) {
 
   return (
     <div>
-      <h1>{t('projects')}</h1>
-      <p>Here are some of my projects.</p>
+      <h1 className="text-6xl font-bold text-center">{t('projects')}</h1>
+      <p className="text-2xl text-center">Here are some of my projects.</p>
       <ul>
         {projects.map((project) => (
-          <li key={project.id}>
+          <li key={project.id} className="text-1xl text-center mt-8">
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <p>{project.tags.join(", ")}</p>
-            <a 
+            <a className="text-blue-500 hover:underline"
               href={project.github}
               target="_blank"
               rel="noreferrer noopener">GitHub</a>

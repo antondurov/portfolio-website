@@ -5,25 +5,27 @@ function CV() {
 
   return (
     <div>
-      <h1>{t('cv')}</h1>
-      <h2>Certifications</h2>
-      <p>
-        <a href="https://coursera.org/share/aa1ced7804288295e5fb6b302bdfc007"
+      <h1 className="text-6xl font-bold text-center mt-8">{t('cv')}</h1>
+      <h2 className="text-3xl font-bold text-center mt-8">Certifications</h2>
+      <p className="text-center mt-2">
+        <a className="text-blue-500 hover:underline"
+        href="https://coursera.org/share/aa1ced7804288295e5fb6b302bdfc007"
         target="_blank">
         IBM Full Stack Software Developer
         </a>
       </p>
-      <p>
-        <a href="https://certificates.cs50.io/91597d90-e00d-4e0a-bde9-4d3490d27602.pdf?size=letter"
+      <p className="text-center mt-2">
+        <a className="text-blue-500 hover:underline"
+        href="https://certificates.cs50.io/91597d90-e00d-4e0a-bde9-4d3490d27602.pdf?size=letter"
         target="_blank">
         CS50x - Harvard
         </a>
       </p>
-      <h2>Experience</h2>
-      <h3>
+      <h2 className="text-3xl font-bold text-center mt-8">Experience</h2>
+      <h3 className="text-1xl font-bold text-center mt-8">
         Music and Audio
       </h3>
-      <p>
+      <p className="text-center mt-2">
         7+ years of music production and audio engineering experience, 
         including mixing, mastering, and sound design. <br/>
         Made countless of remixes and original tracks, some of which have 
@@ -32,23 +34,23 @@ function CV() {
         see Accomplishments. 
         {/* TODO: Add anchor to accomlishments section */} <br/>
       </p>
-      <h3>Software Development</h3>
-      <p>
+      <h3 className="text-1xl font-bold text-center mt-8">Software Development</h3>
+      <p className="text-center mt-2">
         Various personal projects, including web applications, see projects {/* TODO: Add anchor to projects page */} <br/>
-        Finished a variety of courses, see certificates {/* TODO: Add anchor to certficate sections */} <br/>
+        Finished a variety of courses, see certificates. {/* TODO: Add anchor to certficate sections */} <br/>
       </p>
-      <h3>Human Resources</h3>
-      <p>
+      <h3 className="text-1xl font-bold text-center mt-8">Human Resources</h3>
+      <p className="text-center mt-2">
         10 months of experience in human resources, including 
         employee relations, and performance management. 
         In a government manufacturing facility. <br/>
       </p>
-      <h2>Education</h2>
-      <p>
+      <h2 className="text-2xl font-bold text-center mt-8">Education</h2>
+      <p className="text-center mt-2">
         Finished 12 years of school, including high school, 
         in the Democratic School Kanaf. <br/>
       </p>
-      <h2>Accomplishments</h2>
+      <h2 className="text-3xl font-bold text-center mt-8">Accomplishments</h2>
       { /* TODO: Add accomplishments in the music industry:
             - Released tracks on various record labels
             - Remixes
@@ -61,7 +63,7 @@ function CV() {
              so the user can choose to see it or not.
              With addded links and info
       */ }
-      <p>
+      <p className="text-center mt-2">
         First breakthrough came with tiktok in 2022, 
         when my remix of "Tek it" by Cafune went viral. <br/>
         The remix was used in over 20k videos, and reached over 
