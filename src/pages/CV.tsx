@@ -5,7 +5,7 @@ function CV() {
 
   return (
     <div>
-      <h1 className="text-6xl font-bold text-center mt-8">{t('cv')}</h1>
+      <h1 className="text-6xl font-bold text-center">{t('cv')}</h1>
       <h2 className="text-3xl font-bold text-center mt-8">Certifications</h2>
       <p className="text-center mt-2">
         <a className="text-blue-500 hover:underline"
@@ -69,7 +69,8 @@ function CV() {
         The remix was used in over 20k videos, and reached over 
         4 million streams on SoundCloud. <br/>
         Later on I released a few more remixes and original tracks,
-        some of which are hardstyle remixes like the "Tek it" remix,  
+        some of which are <br/> 
+        hardstyle remixes like the "Tek it" remix,  
         and some of which are original tracks. Totalling 
         over 14 million streams on SoundCloud. <br/>
         After moving on from hardstyle, I started releasing music 

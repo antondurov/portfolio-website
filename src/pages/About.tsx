@@ -8,9 +8,8 @@ function About() {
       <h1 className="text-6xl font-bold text-center">{t('about')}</h1>
       <p className="text-center mt-8">
         My name is Anton, I'm 21 years old from israel.<br/>
-        I am a software developer and audio engineer. 
-        I have a passion for creating and building things.<br/>
-        I have been producing and writing music for over 7 years,
+        I am a software developer and audio engineer. <br/>
+        I have been producing and writing music for over 7 years, <br/>
         I had some experience in programming before I took the courses
         CS50 and IBM Full Stack Software Developer.<br/>
         {

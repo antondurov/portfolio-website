@@ -11,7 +11,7 @@ function Projects({ projects: projects }: ProjectsProps) {
   return (
     <div>
       <h1 className="text-6xl font-bold text-center">{t('projects')}</h1>
-      <p className="text-2xl text-center">Here are some of my projects.</p>
+      <p className="text-3xl text-center mt-2">Here are some of my projects.</p>
       <ul>
         {projects.map((project) => (
           <li key={project.id} className="text-1xl text-center mt-8">
