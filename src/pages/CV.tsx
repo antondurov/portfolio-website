@@ -5,8 +5,8 @@ function CV() {
 
   return (
     <div>
-      <h1 className="text-6xl font-bold text-center">{t('cv')}</h1>
-      <h2 className="text-3xl font-bold text-center mt-8">Certifications</h2>
+      <h1 className="text-6xl font-bold text-center underline">{t('cv')}</h1>
+      <h2 className="text-3xl font-bold text-center mt-8 underline">Certifications</h2>
       <p className="text-center mt-2">
         <a className="text-blue-500 hover:underline"
         href="https://coursera.org/share/aa1ced7804288295e5fb6b302bdfc007"
@@ -21,8 +21,8 @@ function CV() {
         CS50x - Harvard
         </a>
       </p>
-      <h2 className="text-3xl font-bold text-center mt-8">Experience</h2>
-      <h3 className="text-1xl font-bold text-center mt-8">
+      <h2 className="text-3xl font-bold text-center mt-8 underline">Experience</h2>
+      <h3 className="text-1xl font-bold text-center mt-8 underline">
         Music and Audio
       </h3>
       <p className="text-center mt-2">
@@ -34,23 +34,23 @@ function CV() {
         see Accomplishments. 
         {/* TODO: Add anchor to accomlishments section */} <br/>
       </p>
-      <h3 className="text-1xl font-bold text-center mt-8">Software Development</h3>
+      <h3 className="text-1xl font-bold text-center mt-8 underline">Software Development</h3>
       <p className="text-center mt-2">
         Various personal projects, including web applications, see projects {/* TODO: Add anchor to projects page */} <br/>
         Finished a variety of courses, see certificates. {/* TODO: Add anchor to certficate sections */} <br/>
       </p>
-      <h3 className="text-1xl font-bold text-center mt-8">Human Resources</h3>
+      <h3 className="text-1xl font-bold text-center mt-8 underline">Human Resources</h3>
       <p className="text-center mt-2">
         10 months of experience in human resources, including 
         employee relations, and performance management. 
         In a government manufacturing facility. <br/>
       </p>
-      <h2 className="text-2xl font-bold text-center mt-8">Education</h2>
+      <h2 className="text-2xl font-bold text-center mt-8 underline">Education</h2>
       <p className="text-center mt-2">
         Finished 12 years of school, including high school, 
         in the Democratic School Kanaf. <br/>
       </p>
-      <h2 className="text-3xl font-bold text-center mt-8">Accomplishments</h2>
+      <h2 className="text-3xl font-bold text-center mt-8 underline">Accomplishments</h2>
       { /* TODO: Add accomplishments in the music industry:
             - Released tracks on various record labels
             - Remixes

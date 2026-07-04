@@ -10,7 +10,7 @@ function Projects({ projects: projects }: ProjectsProps) {
 
   return (
     <div>
-      <h1 className="text-6xl font-bold text-center">{t('projects')}</h1>
+      <h1 className="text-6xl font-bold text-center underline">{t('projects')}</h1>
       <p className="text-3xl text-center mt-2">Here are some of my projects.</p>
       <ul>
         {projects.map((project) => (

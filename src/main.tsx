@@ -9,7 +9,9 @@ import '@/App.css'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
-      <App />
+      <div className='wrapper'>
+        <App />
+      </div>
     </Router>
   </StrictMode>,
 )
