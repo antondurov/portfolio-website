@@ -5,12 +5,13 @@ const resources = {
     en: {
         translation: {
             "title": "My Portfolio",
-            "welcome": "Anton Durov",
+            "welcome": "Hi, nice to meet you.",
             "about": "About me",
             "contact": "Contact me",
             "projects": "Projects",
             "cv": "CV",
-            "not-found": "Page not found"
+            "more": "More",
+            "not-found": "Page not found :("
         }
     },
     ru: {
@@ -21,6 +22,7 @@ const resources = {
             "contact": "Контакты",
             "projects": "Проекты",
             "cv": "Резюме",
+            "more": "Еще",
             "not-found": "Страница не найдена"
         }
     },
@@ -32,6 +34,7 @@ const resources = {
             "contact": "צור קשר",
             "projects": "פרויקטים",
             "cv": "קורות חיים",
+            "more": "עוד",
             "not-found": "דף לא נמצא"
         }
     }

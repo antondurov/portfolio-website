@@ -5,10 +5,10 @@ function Contact() {
 
   return (
     <div>
-      <h1>{t('contact')}</h1>
-      <p>email: antondurov05@gmail.com</p>
-      <p>linkedIn: linkedin.com/in/anton-durov</p>
-      <p>instagram: @antvndurov</p>
+      <h1 className="text-6xl font-bold text-center underline">{t('contact')}</h1>
+      <p className="text-1xl text-center mt-2">email: antondurov05@gmail.com</p>
+      <p className="text-1xl text-center mt-2">linkedIn: linkedin.com/in/anton-durov</p>
+      <p className="text-1xl text-center mt-2">instagram: @antvndurov</p>
     </div>
   );
 }
