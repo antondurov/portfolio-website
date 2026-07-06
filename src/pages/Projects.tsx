@@ -15,7 +15,7 @@ function Projects({ projects: projects }: ProjectsProps) {
       <ul>
         {projects.map((project) => (
           <li key={project.id} className="text-1xl text-center mt-8">
-            <h3>{project.name}</h3>
+            <h3 className="font-bold underline">{project.name}</h3>
             <p>{project.description}</p>
             <p>{project.tags.join(", ")}</p>
             <a className="text-blue-500 hover:underline"
