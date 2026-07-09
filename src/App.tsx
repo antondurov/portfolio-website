@@ -8,6 +8,7 @@ import CV from '@/pages/CV'
 import { projects } from '@/data/projects.ts'
 import '@/App.css'
 import NotFound from '@/pages/NotFound'
+import Music from '@/pages/Music'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/projects" element={<Projects projects={projects} />} />
         <Route path="/cv" element={<CV />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/music" element={<Music />} />
       </Routes>
     </>
   )
