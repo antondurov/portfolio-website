@@ -24,9 +24,7 @@ function Navbar() {
             {t('More')}
           </button>
           <div className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
-            <Link className="dropdown-item" to="/cv">{t('CV')}</Link>
-            <Link className="dropdown-item" to="/cv">{t('CV')}</Link>
-            <Link className="dropdown-item" to="/cv">{t('CV')}</Link>
+            <Link className="dropdown-item" to="/music">{t('Music')}</Link>
           </div>
         </div>
       </div>

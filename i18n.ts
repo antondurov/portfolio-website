@@ -11,7 +11,8 @@ const resources = {
             "projects": "Projects",
             "cv": "CV",
             "more": "More",
-            "not-found": "Page not found :("
+            "not-found": "Page not found :(",
+            "Music": "Music"
         }
     },
     ru: {
@@ -23,7 +24,8 @@ const resources = {
             "projects": "Проекты",
             "cv": "Резюме",
             "more": "Еще",
-            "not-found": "Страница не найдена"
+            "not-found": "Страница не найдена",
+            "Music": "Музыка"
         }
     },
     he: {
@@ -35,7 +37,8 @@ const resources = {
             "projects": "פרויקטים",
             "cv": "קורות חיים",
             "more": "עוד",
-            "not-found": "דף לא נמצא"
+            "not-found": "דף לא נמצא",
+            "Music": "מוסיקה"
         }
     }
 }
