@@ -13,9 +13,11 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.12.30",
+    "neon": "^2.32.0",
     "pg": "^8.22.0",
     "postgres": "^3.4.9",
     "vercel": "^56.1.0",
