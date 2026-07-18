@@ -1,8 +1,8 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
-import { projects, messages } from "./db/schema";
+import { projects, messages } from "./src/db/schema";
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const pool = new Pool({ connectionString: Bun.env.DATABASE_URL });
 const db = drizzle(pool);
 
 async function seed() {
@@ -32,9 +32,13 @@ async function seed() {
         { projectId: project2[0].id, content: "Message 1 for Project 2" },
         { projectId: project2[0].id, content: "Message 2 for Project 2" },
     ]);
+
+    console.log("Database seeded!");
+    await pool.end();
 }
 
-seed().catch((error) => {
+seed().catch(async (error) => {
     console.error("Error seeding the database:", error);
+    await pool.end();
     process.exit(1);
 })
