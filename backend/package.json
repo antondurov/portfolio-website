@@ -13,7 +13,9 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.9.0",
     "@neondatabase/serverless": "^1.1.0",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.12.30",
