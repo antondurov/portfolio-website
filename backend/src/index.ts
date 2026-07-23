@@ -51,6 +51,15 @@ app.get("api/projects/:id", async (c) => {
     return c.json(project);
 });
 
+app.post("api/messages", async (c) => {
+    const data = await c.req.json();
+    console.log("Received message:", data);
+
+    // Here you can handle the message, e.g., save it to the database or send an email
+
+    return c.json({ status: "success", message: "Message received" });
+});
+
 export default {
     port: 3000,
     fetch: app.fetch,
