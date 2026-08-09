@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar'
 import Projects from '@/pages/Projects'
 import CV from '@/pages/CV'
 import { projects } from '@/data/projects.ts'
-import '@/App.css'
 import NotFound from '@/pages/NotFound'
 import Music from '@/pages/Music'
 
@@ -20,8 +19,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects projects={projects} />} />
         <Route path="/cv" element={<CV />} />
-        <Route path="*" element={<NotFound />} />
         <Route path="/music" element={<Music />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
