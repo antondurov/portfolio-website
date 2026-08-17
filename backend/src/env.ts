@@ -1,5 +1,4 @@
 import { z } from "zod";
-import Bun from "bun";
 
 const envSchema = z.object({
   DATABASE_URL: z.string().url(),
@@ -8,7 +7,7 @@ const envSchema = z.object({
 });
 
 export const env = envSchema.parse({
-  DATABASE_URL: Bun.env.DATABASE_URL,
-  API_KEY: Bun.env.API_KEY,
-  FRONTEND_ORIGIN: Bun.env.FRONTEND_ORIGIN,
+  DATABASE_URL: process.env.DATABASE_URL,
+  API_KEY: process.env.API_KEY,
+  FRONTEND_ORIGIN: process.env.FRONTEND_ORIGIN,
 });

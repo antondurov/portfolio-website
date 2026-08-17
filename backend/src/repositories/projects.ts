@@ -1,5 +1,5 @@
-import { db } from "../db/db";
-import { projects } from "../db/schema";
+import { db } from "../db/db.ts";
+import { projects } from "../db/schema.ts";
 import { eq } from "drizzle-orm";
 
 export async function getAllProjects() {

@@ -1,11 +1,21 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
-import { env } from "../env";
-import { db } from "./db/db";
-import { getAllProjects, getProjectById } from "./repositories/projects";
+import { env } from "./env.ts";
+import { db } from "./db/db.ts";
+import { getAllProjects, getProjectById } from "./repositories/projects.ts";
+import { z } from "zod";
+import { Context } from "hono";
+import type { Next } from "hono";
 
 const app = new Hono();
+const apiKeyMiddleware = async (c: Context, next: Next) => {
+    const apiKey = c.req.header("x-api-key");
+    if (apiKey !== env.API_KEY) {
+        return c.json({ error: "Unauthorized" }, 401);
+    }
+    await next();
+};
 
 app.use(
   "*",
@@ -22,7 +32,7 @@ app.get("/", (c) => {
   });
 });
 
-app.get("api/health", async (c) => {
+app.get("/api/health", async (c) => {
     try {
         await db.execute("SELECT 1");
         return c.json({ status: "ok", database: "connected" });
@@ -31,11 +41,11 @@ app.get("api/health", async (c) => {
     }
 });
 
-app.get("api/projects", (c) => {
+app.get("/api/projects", (c) => {
     return c.json(getAllProjects());
 });
 
-app.get("api/projects/:id", async (c) => {
+app.get("/api/projects/:id", async (c) => {
     const id = Number(c.req.param("id"));
 
     if (isNaN(id)) {
@@ -51,16 +61,33 @@ app.get("api/projects/:id", async (c) => {
     return c.json(project);
 });
 
-app.post("api/messages", async (c) => {
-    const data = await c.req.json();
-    console.log("Received message:", data);
+const messageSchema = z.object({
+        content: z.string().min(1),
+});
 
-    // Here you can handle the message, e.g., save it to the database or send an email
+app.post("/api/messages", async (c) => {
+    const body = await c.req.json();
+    const parseResult = messageSchema.safeParse(body);
 
-    return c.json({ status: "success", message: "Message received" });
+    if (!parseResult.success) {
+        return c.json({ error: "Invalid message format" }, 400);
+    }
+
+    const { content } = parseResult.data;
+
+    return c.json({ message: content });
+});
+
+app.get("/api/messages", apiKeyMiddleware, async (c) => {
+    const messages = [
+        "foo",
+        "bar",
+        "baz",
+    ];
+    return c.json(messages);
 });
 
 export default {
     port: 3000,
     fetch: app.fetch,
-}
+};

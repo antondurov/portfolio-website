@@ -9,6 +9,12 @@
     "drizzle-kit": "^0.31.10",
     "tsx": "^4.23.1"
   },
+  "scripts": {
+    "dev": "bun src/index.ts",
+    "migrate:dev": "drizzle-kit generate:pg --out ./drizzle --schema ./schema.ts && drizzle-kit push:pg --schema ./schema.ts",
+    "migrate:prod": "drizzle-kit generate:pg --out ./drizzle --schema ./schema.ts && drizzle-kit push:pg --schema ./schema.ts --auto-approve",
+    "testServer": "bun vitest"
+  },
   "peerDependencies": {
     "typescript": "^5"
   },
@@ -20,8 +26,10 @@
     "drizzle-orm": "^0.45.2",
     "hono": "^4.12.30",
     "neon": "^2.32.0",
+    "node-fetch": "^3.3.2",
     "pg": "^8.22.0",
     "postgres": "^3.4.9",
+    "ts-node": "^10.9.2",
     "vercel": "^56.1.0",
     "zod": "^4.4.3"
   }

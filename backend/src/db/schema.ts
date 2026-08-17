@@ -4,7 +4,8 @@ export const projects = pgTable("projects", {
   id: serial("id").primaryKey().notNull(),
   name: varchar("name", { length: 255 }).notNull(),
   description: text("description").notNull(),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
+  tags: text("tags").array().notNull(),
+  github: varchar("github", { length: 255 }).notNull(),
 });
 
 export const messages = pgTable("messages", {

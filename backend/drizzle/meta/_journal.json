@@ -8,6 +8,13 @@
       "when": 1783960877291,
       "tag": "0000_unusual_the_fury",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1786789410779,
+      "tag": "0001_nasty_franklin_richards",
+      "breakpoints": true
     }
   ]
 }

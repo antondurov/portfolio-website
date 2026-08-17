@@ -6,4 +6,4 @@ const EnvSchema = z.object({
   FRONTEND_ORIGIN: z.string(),
 });
 
-export const env = EnvSchema.parse(Bun.env);
+export const env = EnvSchema.parse(process.env);
