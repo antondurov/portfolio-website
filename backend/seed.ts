@@ -27,14 +27,14 @@ async function seed() {
 
     // Seed messages for Project 1
     await db.insert(messages).values([
-        { projectId: project1[0].id, content: "Message 1 for Project 1" },
-        { projectId: project1[0].id, content: "Message 2 for Project 1" },
+        { id: project1[0].id, content: "Message 1 for Project 1" },
+        { id: project1[0].id, content: "Message 2 for Project 1" },
     ]);
 
     // Seed messages for Project 2
     await db.insert(messages).values([
-        { projectId: project2[0].id, content: "Message 1 for Project 2" },
-        { projectId: project2[0].id, content: "Message 2 for Project 2" },
+        { id: project2[0].id, content: "Message 1 for Project 2" },
+        { id: project2[0].id, content: "Message 2 for Project 2" },
     ]);
 
     console.log("Database seeded!");

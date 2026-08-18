@@ -10,7 +10,6 @@ export const projects = pgTable("projects", {
 
 export const messages = pgTable("messages", {
   id: serial("id").primaryKey().notNull(),
-  projectId: serial("project_id").references(() => projects.id).notNull(),
   content: text("content").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
