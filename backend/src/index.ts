@@ -8,7 +8,7 @@ import { z } from "zod";
 import { Context } from "hono";
 import type { Next } from "hono";
 
-const app = new Hono();
+export const app = new Hono();
 const apiKeyMiddleware = async (c: Context, next: Next) => {
     const apiKey = c.req.header("x-api-key");
     if (apiKey !== env.API_KEY) {
@@ -41,8 +41,9 @@ app.get("/api/health", async (c) => {
     }
 });
 
-app.get("/api/projects", (c) => {
-    return c.json(getAllProjects());
+app.get("/api/projects", async (c) => {
+    const projects = await getAllProjects();
+    return c.json(projects);
 });
 
 app.get("/api/projects/:id", async (c) => {
@@ -90,4 +91,4 @@ app.get("/api/messages", apiKeyMiddleware, async (c) => {
 export default {
     port: 3000,
     fetch: app.fetch,
-};
+}
