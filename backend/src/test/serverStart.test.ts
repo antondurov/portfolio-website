@@ -1,5 +1,5 @@
-import fetch from "node-fetch";
 import "../index.ts";
+import fetch from "node-fetch";
 
 describe("Server Start Test", () => {
     it("should start the server without errors", async () => {
@@ -7,6 +7,7 @@ describe("Server Start Test", () => {
         expect(server).toBeDefined();
     });
 })
+
 describe("Health Check Test", () => {
     it("should return status ok and database connected", async () => {
         const response = await fetch("http://localhost:3000/api/health");

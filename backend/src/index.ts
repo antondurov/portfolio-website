@@ -80,7 +80,7 @@ app.post("/api/messages", async (c) => {
         const message = await createMessage(content);
         return c.json(message, 201);
     } catch (error) {
-        console.log("Error creating message:", error);
+        console.log("Error creating message", error);
         return c.json({ error: "Failed to create message" }, 500);
     }
 });
