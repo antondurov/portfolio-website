@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
-import { projects, messages } from "./src/db/schema";
+import { projects } from "./src/db/schema";
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const db = drizzle(pool);
@@ -24,18 +24,6 @@ async function seed() {
     if (!project1[0] || !project2[0]) {
         throw new Error("Failed to seed projects.");
     }
-
-    // Seed messages for Project 1
-    await db.insert(messages).values([
-        { id: project1[0].id, content: "Message 1 for Project 1" },
-        { id: project1[0].id, content: "Message 2 for Project 1" },
-    ]);
-
-    // Seed messages for Project 2
-    await db.insert(messages).values([
-        { id: project2[0].id, content: "Message 1 for Project 2" },
-        { id: project2[0].id, content: "Message 2 for Project 2" },
-    ]);
 
     console.log("Database seeded!");
     await pool.end();
