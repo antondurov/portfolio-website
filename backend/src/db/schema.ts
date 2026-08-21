@@ -1,4 +1,4 @@
-import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, varchar, timestamp } from "drizzle-orm/pg-core";
 
 export const projects = pgTable("projects", {
   id: serial("id").primaryKey().notNull(),
@@ -6,4 +6,8 @@ export const projects = pgTable("projects", {
   description: text("description").notNull(),
   tags: text("tags").array().notNull(),
   github: varchar("github", { length: 255 }).notNull(),
+  createdAt: timestamp("created_at", { 
+    withTimezone: true}).defaultNow().notNull(),
+  updatedAt: timestamp("updated_at", {
+    withTimezone: true}).defaultNow().notNull(),
 });
