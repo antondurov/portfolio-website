@@ -4,8 +4,11 @@ import { logger } from "hono/logger";
 import { env } from "./env.ts";
 import { db } from "./db/db.ts";
 import { getAllProjects, getProjectById } from "./repositories/projects.ts";
+import { initLog } from "packages";
 
 export const app = new Hono();
+
+const log = initLog(process.env.LOG_LEVEL || "info");
 
 app.use(
   "*",
@@ -56,3 +59,5 @@ export default {
     port: 3000,
     fetch: app.fetch,
 }
+
+log.info("Running on port 3000");

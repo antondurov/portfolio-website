@@ -1,5 +1,5 @@
 {
-  "name": "core",
+  "name": "packages",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -7,5 +7,9 @@
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./*": "./*.ts"
   }
 }

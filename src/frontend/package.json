@@ -20,9 +20,9 @@
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-i18next": "^17.0.8",
-    "react-router-dom": "^7.18.0"
+    "react-router-dom": "^7.18.0",
+    "packages": "workspace:packages"
   },
-
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.2",

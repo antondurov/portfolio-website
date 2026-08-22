@@ -9,8 +9,11 @@ import { projects } from '@/data/projects.ts'
 import '@/App.css'
 import NotFound from '@/pages/NotFound'
 import Music from '@/pages/Music'
+import { initLog } from "packages";
 
+const log = initLog();
 function App() {
+  log.info("App component rendered");
   return (
     <>
       <Navbar />
