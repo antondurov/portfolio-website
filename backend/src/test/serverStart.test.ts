@@ -1,18 +1,17 @@
-import "../index.ts";
-import fetch from "node-fetch";
+import { app } from "../index.ts";
 
-describe("Server Start Test", () => {
-    it("should start the server without errors", async () => {
-        const server = await import("../index.ts");
-        expect(server).toBeDefined();
-    });
-})
+describe("GET /", () => {
+  it("reports the API is running", async () => {
+    const res = await app.request("/");
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ message: "API running" });
+  });
+});
 
-describe("Health Check Test", () => {
-    it("should return status ok and database connected", async () => {
-        const response = await fetch("http://localhost:3000/api/health");
-        const data = await response.json() as { status: string, database: string };
-        expect(data.status).toBe("ok");
-        expect(data.database).toBe("connected");
-    }, 5000)
-})
+describe("GET /api/health", () => {
+  it("reports the database as connected", async () => {
+    const res = await app.request("/api/health");
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ status: "ok", database: "connected" });
+  });
+});

@@ -25,9 +25,10 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-    "@/*": ["src/*"]
+    "@/*": ["*"]
   },
   "ignoreDeprecations": "6.0",
   },
-  "include": ["src", "src/data/projects.ts"],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "vite.config.ts"],
 }
