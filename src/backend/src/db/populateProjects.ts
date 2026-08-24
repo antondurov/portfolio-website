@@ -1,13 +1,15 @@
 import { Pool } from "pg";
 import { projects } from "./schema";
-import { projects as projectData } from "../../../src/data/projects";
+import { projects as projectData } from "../data/projects";
 import { db } from "./db";
+import { initLog } from "packages";
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
 })
 
-// console.log("Database URL:", process.env.DATABASE_URL);
+const log = initLog();
+
 async function populateProjects() {
     try {
         for (const project of projectData) {
@@ -17,11 +19,11 @@ async function populateProjects() {
                 tags: project.tags,
                 github: project.github,
             });
-            console.log(`Inserted project: ${project.name}`);
+            log.info(`Inserted project: ${project.name}`);
         }
-        console.log("Projects populated successfully.");
+        log.info("Projects populated successfully.");
     } catch (error) {
-        console.error("Error populating projects:", error);
+        log.error("Error populating projects:", error);
     } finally {
         await pool.end();
     }
