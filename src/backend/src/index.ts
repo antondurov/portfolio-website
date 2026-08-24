@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { env } from "./env.ts";
-import { db } from "./db/db.ts";
+import { db } from "../db/db.ts";
 import { getAllProjects, getProjectById } from "./repositories/projects.ts";
 import { initLog } from "packages";
 

@@ -1,6 +1,6 @@
 import { Pool } from "pg";
 import { projects } from "./schema";
-import { projects as projectData } from "../data/projects";
+import { projects as projectData } from "../src/data/projects";
 import { db } from "./db";
 import { initLog } from "packages";
 

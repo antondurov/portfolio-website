@@ -19,6 +19,7 @@
     "npm": "11.9.0"
   },
   "dependencies": {
+    "@types/jest": "^30.0.0",
     "eslint": "^10.9.0"
   }
 }

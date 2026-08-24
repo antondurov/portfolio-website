@@ -1,5 +1,5 @@
-import { db } from "../db/db.ts";
-import { projects } from "../db/schema.ts";
+import { db } from "../../db/db.ts";
+import { projects } from "../../db/schema.ts";
 import { eq } from "drizzle-orm";
 
 type Project = typeof projects.$inferInsert;

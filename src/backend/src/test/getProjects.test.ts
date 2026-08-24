@@ -1,8 +1,8 @@
 import { app } from "../index.ts";
-import { db } from "../db/db.ts";
-import { projects } from "../db/schema.ts";
+import { db } from "../../db/db.ts";
+import { projects } from "../../db/schema.ts";
 
-const sample = {
+const sample: typeof projects.$inferInsert = {
   name: "portfolio-website",
   description: "Personal site + API.",
   tags: ["react", "hono", "drizzle"],

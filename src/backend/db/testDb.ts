@@ -6,5 +6,5 @@ import { fileURLToPath } from "node:url";
 export const db = drizzle(new PGlite());
 
 await migrate(db, {
-  migrationsFolder: fileURLToPath(new URL("../../drizzle", import.meta.url)),
+  migrationsFolder: fileURLToPath(new URL("../drizzle", import.meta.url)),
 });
