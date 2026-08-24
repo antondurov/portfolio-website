@@ -30,29 +30,40 @@ app.get("/api/health", async (c) => {
         await db.execute("SELECT 1");
         return c.json({ status: "ok", database: "connected" });
     } catch (error) {
+      log.error("Database connection error:", error);
         return c.json({ status: "error", database: error }, 500);
     }
 });
 
 app.get("/api/projects", async (c) => {
+  try {
     const projects = await getAllProjects();
     return c.json(projects);
+  } catch (error) {
+    log.error("Error fetching projects:", error);
+    return c.json({ error: "Internal server error" }, 500);
+  }
 });
 
 app.get("/api/projects/:id", async (c) => {
     const id = Number(c.req.param("id"));
 
-    if (isNaN(id)) {
-        return c.json({ error: "Invalid project ID" }, 400);
+    try {
+      if (isNaN(id)) {
+        log.error(`Invalid project ID: ${c.req.param("id")}`);
+          return c.json({ error: "Invalid project ID" }, 400);
+      }
+
+      const project = await getProjectById(id);
+
+      if (!project) {
+          return c.json({ error: "Project not found" }, 404);
+      }
+      return c.json(project);
+    } catch (error) {
+      log.error("Error fetching project by ID:", error);
+      return c.json({ error: "Internal server error" }, 500);
     }
-
-    const project = await getProjectById(id);
-
-    if (!project) {
-        return c.json({ error: "Project not found" }, 404);
-    }
-
-    return c.json(project);
 });
 
 export default {

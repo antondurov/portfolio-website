@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar'
 import Projects from '@/pages/Projects'
 import CV from '@/pages/CV'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
-import { projects } from '@/data/projects'
+import { projects } from '../backend/src/data/projects'
 import NotFound from '@/pages/NotFound'
 
 describe('App', () => {
