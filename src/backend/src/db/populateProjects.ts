@@ -8,7 +8,7 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
 })
 
-const log = initLog();
+const log = initLog(process.env.LOG_LEVEL || "info");
 
 async function populateProjects() {
     try {

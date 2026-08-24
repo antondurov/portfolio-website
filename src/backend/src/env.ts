@@ -1,4 +1,12 @@
 import { z } from "zod";
+import { initLog } from "packages";
+
+const log = initLog(process.env.LOG_LEVEL || "info");
+
+if (!process.env.DATABASE_URL) {
+  log.error("DATABASE_URL is not defined in the environment variables.");
+  throw new Error("DATABASE_URL is not defined in the environment variables.");
+}
 
 const envSchema = z.object({
   DATABASE_URL: z.string().url(),
