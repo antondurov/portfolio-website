@@ -101,6 +101,9 @@ for var_name in "${!SECRETS[@]}"; do
   printf 'export %s="%s"\n' "$var_name" "$value" >> "$ENVRC_PATH".tmp
 done
 
+printf 'export FRONTEND_ORIGIN="http://localhost:5174"\n' >> "$ENVRC_PATH".tmp
+printf 'export LOG_LEVEL="debug"\n' >> "$ENVRC_PATH".tmp
+
 mv "$ENVRC_PATH".tmp "$ENVRC_PATH"
 chmod 600 "$ENVRC_PATH"
 
