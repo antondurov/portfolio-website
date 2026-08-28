@@ -1,7 +1,7 @@
 import { Pool } from "pg";
-import { projects } from "./schema";
+import { projects } from "../db/schema";
 import { projects as projectData } from "../src/data/projects";
-import { db } from "./db";
+import { db } from "../db/db";
 import { initLog } from "packages";
 
 const pool = new Pool({
