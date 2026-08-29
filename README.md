@@ -24,6 +24,17 @@ bun run test
 bun lefthook install
 ```
 
+### For Developing
+
+To set up the development environment, ensure you have access to:
+- `DATABASE_URL` and `API_KEY` in your Apple Password Manager.
+- NOTE: This only works on Mac since Apple Passwords is apple native.
+
+Run the following command to fetch and set up the environment variables:
+```shell
+bun run setup:env
+```
+
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
