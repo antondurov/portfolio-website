@@ -30,9 +30,9 @@ describe('App', () => {
         expect(links).toHaveLength(6)
         expect(links[0]).toHaveTextContent('ANTON DUROV')
         expect(links[1]).toHaveTextContent('Home')
-        expect(links[2]).toHaveTextContent('About')
+        expect(links[2]).toHaveTextContent('CV')
         expect(links[3]).toHaveTextContent('Projects')
-        expect(links[4]).toHaveTextContent('CV')
+        expect(links[4]).toHaveTextContent('Music')
         expect(links[5]).toHaveTextContent('Contact')
     })
 

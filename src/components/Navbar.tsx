@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+// import { useState } from "react";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `relative px-1.5 py-2 font-mono text-[0.65rem] tracking-[0.1em] uppercase transition-colors sm:px-3 sm:text-xs sm:tracking-[0.15em] ${
@@ -20,7 +20,7 @@ function ActiveDot({ isActive }: { isActive: boolean }) {
 
 function Navbar() {
   const { t } = useTranslation();
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
 
   return (
     <nav
@@ -38,9 +38,10 @@ function Navbar() {
         <div className="flex items-center">
           {[
             { to: "/", label: t("Home") },
-            { to: "/about", label: t("About") },
-            { to: "/projects", label: t("Projects") },
+             // { to: "/about", label: t("About") },
             { to: "/cv", label: t("CV") },
+            { to: "/projects", label: t("Projects") },
+            { to: "/music", label: t("Music") },
             { to: "/contact", label: t("Contact") },
           ].map((item) => (
             <NavLink role="link" key={item.to} to={item.to} end={item.to === "/"} className={navLinkClass}>
@@ -53,7 +54,7 @@ function Navbar() {
             </NavLink>
           ))}
 
-          <div className="relative">
+          { /* <div className="relative">
             <button
               type="button"
               className="px-2 py-2 font-mono text-xs tracking-[0.15em] text-text-muted uppercase transition-colors hover:text-text sm:px-3"
@@ -76,6 +77,7 @@ function Navbar() {
               </div>
             )}
           </div>
+          */}
         </div>
       </div>
     </nav>
