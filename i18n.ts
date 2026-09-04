@@ -5,7 +5,7 @@ const resources = {
     en: {
         translation: {
             "title": "My Portfolio",
-            "welcome": "Hi, nice to meet you.",
+            "welcome": "Hi, I'm Anton",
             "home": "Home",
             "about": "Me",
             "projects": "Projects",
@@ -19,7 +19,7 @@ const resources = {
     ru: {
         translation: {
             "title": "Мое портфолио",
-            "welcome": "Добро пожаловат!",
+            "welcome": "Привет, я Антон",
             "about": "Обо мне",
             "contact": "Контакты",
             "projects": "Проекты",
@@ -32,7 +32,7 @@ const resources = {
     he: {
         translation: {
             "title": "הפורטפוליו שלי",
-            "welcome": "ברוך הבא",
+            "welcome": "שלום, אני אנטון",
             "about": "עלי",
             "contact": "צור קשר",
             "projects": "פרויקטים",

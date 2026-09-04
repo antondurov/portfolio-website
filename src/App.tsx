@@ -8,10 +8,12 @@ import CV from '@/pages/CV'
 import { projects } from '@/data/projects.ts'
 import NotFound from '@/pages/NotFound'
 import Music from '@/pages/Music'
+import BackgroundMusic from './components/BackgroundMusic'
 
 function App() {
   return (
     <>
+    <BackgroundMusic src="/../public/portfolio_soundtrack.mp3" volume={0.4} />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

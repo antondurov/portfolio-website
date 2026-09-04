@@ -116,6 +116,16 @@
     outline-offset: 2px;
   }
 
+  .music-btn {
+    color: var(--accent);
+    border: var(--accent) 1px solid;
+    border-radius: var(--radius);
+  }
+  
+  .music-btn:hover {
+    color: var(--bg);
+    background-color: var(--accent);
+  }
 
 }
 
