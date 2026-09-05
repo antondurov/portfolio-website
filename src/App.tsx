@@ -13,7 +13,7 @@ import BackgroundMusic from './components/BackgroundMusic'
 function App() {
   return (
     <>
-    <BackgroundMusic src="/../public/portfolio_soundtrack.mp3" volume={0.4} />
+    <BackgroundMusic src="/portfolio_soundtrack.mp3" volume={0.4} />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
