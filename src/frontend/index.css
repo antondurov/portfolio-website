@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   THEME
+   Every color, font, and radius the site uses lives here. Change a value
+   in one place and it updates everywhere -- pages never hardcode hex codes.
+   ========================================================================== */
+:root {
+  /* Surfaces */
+  --bg: #0c0d10;
+  --panel: #16181d;
+  --panel-hover: #1b1e24;
+  --line: #2a2d34;
+  --line-strong: #3a3e47;
+
+  /* Text */
+  --text: #ece9e2;
+  --text-muted: #90939c;
+  --text-faint: #5b5e67;
+
+  /* Accents */
+  --accent: #5cf38e;
+  --accent-dim: #0fbd63;
+  --accent-2: #ff9a4d;
+  --accent-2-dim: #8a5426;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
+
+  /* Shape */
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-hover: var(--panel-hover);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-2: var(--accent-2);
+  --color-accent-2-dim: var(--accent-2-dim);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+/* ==========================================================================
+   BASE
+   Wrapped in @layer base so Tailwind utility classes (e.g. text-accent on
+   a link) always win over these element defaults, regardless of source
+   order -- unlayered CSS would otherwise beat utilities unconditionally.
+   ========================================================================== */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .music-btn {
+    color: var(--accent);
+    border: var(--accent) 1px solid;
+    border-radius: var(--radius);
+  }
+  
+  .music-btn:hover {
+    color: var(--bg);
+    background-color: var(--accent);
+  }
+
+}
+
+/* Respect reduced-motion for the level-meter divider and any transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
