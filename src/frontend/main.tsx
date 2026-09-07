@@ -3,8 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router} from 'react-router-dom'
 import '@/index.css'
 import App from '@/App.tsx'
-import '@/i18n.ts'
-import '@/App.css'
+import './i18n.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

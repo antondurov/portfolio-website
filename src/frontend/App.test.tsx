@@ -27,17 +27,22 @@ describe('App', () => {
             </MemoryRouter>
         )
         const links = screen.getAllByRole('link');
-        expect(links).toHaveLength(5)
-        expect(links[0]).toHaveTextContent('Home')
-        expect(links[1]).toHaveTextContent('About')
-        expect(links[2]).toHaveTextContent('Contact')
+        expect(links).toHaveLength(6)
+        expect(links[0]).toHaveTextContent('ANTON DUROV')
+        expect(links[1]).toHaveTextContent('Home')
+        expect(links[2]).toHaveTextContent('CV')
         expect(links[3]).toHaveTextContent('Projects')
-        expect(links[4]).toHaveTextContent('CV')
+        expect(links[4]).toHaveTextContent('Music')
+        expect(links[5]).toHaveTextContent('Contact')
     })
 
     it('renders Home page', () => {
-        render(<Home />)
-        expect(screen.getByText("welcome")).toBeInTheDocument()
+        render(
+            <MemoryRouter>
+                <Home />
+            </MemoryRouter>
+        )
+        expect(screen.getByRole("welcome")).toBeInTheDocument()
     })
     
     it('renders About page', () => {

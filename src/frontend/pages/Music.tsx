@@ -1,4 +1,7 @@
-import React from "react";
+import Page from "@/components/layout/Page";
+import Panel from "@/components/ui/Panel";
+import KeyValueRow from "@/components/ui/KeyValueRow";
+import LevelMeter from "@/components/ui/LevelMeter";
 import { musicData } from "@/data/musicData";
 
 type Song = {
@@ -18,67 +21,72 @@ type About = {
   philosophy: string;
 };
 
-const MusicShowcase: React.FC = () => {
+function SongList({ title, songs }: { title: string; songs: Song[] }) {
+  if (songs.length === 0) return null;
+  return (
+    <div>
+      <h3 className="font-mono text-xs tracking-[0.15em] text-text-muted uppercase">
+        {title}
+      </h3>
+      <ul className="mt-3 space-y-4">
+        {songs.map((song, index) => (
+          <li key={index}>
+            <span className="font-medium">{song.title}</span>
+            <iframe
+              className="mt-2 w-full rounded-[var(--radius-sm)]"
+              width="100%"
+              height="150"
+              src={song.soundcloudUrl}
+              title={song.title}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ProfilePanel({ profile }: { profile: Profile }) {
+  return (
+    <Panel label={profile.name}>
+      <div className="space-y-6">
+        <SongList title="Top Songs" songs={profile.topSongs} />
+        <SongList title="Personal Favorites" songs={profile.favorites} />
+        {profile.topSongs.length === 0 && profile.favorites.length === 0 && (
+          <p className="text-text-muted">Tracks coming soon.</p>
+        )}
+      </div>
+    </Panel>
+  );
+}
+
+function AboutPanel({ about }: { about: About }) {
+  return (
+    <Panel label="About the music">
+      <KeyValueRow label="Inspirations">{about.inspirations}</KeyValueRow>
+      <KeyValueRow label="Future goals">{about.futureGoals}</KeyValueRow>
+      <KeyValueRow label="Philosophy">{about.philosophy}</KeyValueRow>
+    </Panel>
+  );
+}
+
+function MusicShowcase() {
   const { antvn, toja, about } = musicData;
 
-  const renderProfile = (profile: Profile) => (
-    <div className="mb-8">
-      <h1 className="text-2xl font-bold mb-4">{profile.name}</h1>
-      <div className="mb-4">
-        <h2 className="text-xl font-semibold">Top Songs (ANTVN)</h2>
-        <ul className="space-y-2">
-          {profile.topSongs.map((song, index) => (
-            <li key={index} className="mt-4 items-center space-x-4">
-              <span className="font-bold underline">{song.title}</span>
-              <iframe
-                width="100%"
-                height="150"
-                src={song.soundcloudUrl}
-              ></iframe>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h2 className="text-xl font-semibold">Personal Favorites (ANTVN)</h2>
-        <ul className="space-y-2">
-        {profile.favorites.map((song, index) => (
-            <li key={index} className="mt-4 items-center space-x-4">
-              <span className="font-bold underline">{song.title}</span>
-              <iframe
-                width="100%"
-                height="150"
-                src={song.soundcloudUrl}
-              ></iframe>
-            </li>
-          ))}
-        </ul>`
-      </div>
-    </div>
-  );
-
-  const renderAbout = (about: About) => (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">About My Music</h2>
-      <p className="mb-4">
-        <strong>Inspirations:</strong> {about.inspirations}
-      </p>
-      <p className="mb-4">
-        <strong>Future Goals:</strong> {about.futureGoals}
-      </p>
-      <p>
-        <strong>Philosophy:</strong> {about.philosophy}
-      </p>
-    </div>
-  );
-
   return (
-    <div className="p-8">
-      {renderProfile(antvn)}
-      {renderProfile(toja)}
-      {renderAbout(about)}
-    </div>
+    <Page
+      eyebrow="Discography"
+      title="Music"
+      intro="Tracks and remixes under my two aliases."
+    >
+      <div className="space-y-8">
+        <ProfilePanel profile={antvn} />
+        <ProfilePanel profile={toja} />
+        <LevelMeter seed={4} />
+        <AboutPanel about={about} />
+      </div>
+    </Page>
   );
-};
+}
 
 export default MusicShowcase;
