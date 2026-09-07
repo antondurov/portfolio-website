@@ -1,4 +1,4 @@
-import type { Project } from "@/data/projects.ts";
+import type { Project } from "../../backend/src/data/projects.ts";
 import { useTranslation } from "react-i18next";
 
 interface ProjectsProps {
