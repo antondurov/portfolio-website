@@ -1,0 +1,42 @@
+{
+  "name": "database",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.23.1",
+    "@electric-sql/pglite": "^0.5.6",
+    "vitest": "^4.1.9"
+  },
+  "scripts": {
+    "dev": "bun src/index.ts",
+    "migrate:dev": "drizzle-kit generate:pg --out ./drizzle --schema ./schema.ts && drizzle-kit push:pg --schema ./schema.ts",
+    "migrate:prod": "drizzle-kit generate:pg --out ./drizzle --schema ./schema.ts && drizzle-kit push:pg --schema ./schema.ts --auto-approve",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "echo 'No linting configured'",
+    "setup:env": "bash scripts/setupEnvrc.sh"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.9.0",
+    "@neondatabase/serverless": "^1.1.0",
+    "@types/supertest": "^7.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.30",
+    "jq": "^1.7.2",
+    "neon": "^2.32.0",
+    "node-fetch": "^3.3.2",
+    "packages": "workspace:packages",
+    "pg": "^8.22.0",
+    "postgres": "^3.4.9",
+    "supertest": "^7.2.2",
+    "ts-node": "^10.9.2",
+    "vercel": "^56.1.0",
+    "zod": "^4.4.3"
+  }
+}

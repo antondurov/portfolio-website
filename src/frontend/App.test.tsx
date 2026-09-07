@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react'
-import Home from '@/pages/Home'
+import Home from './pages/Home'
 import About from '@/pages/About'
 import Contact from '@/pages/Contact'
 import Navbar from '@/components/Navbar'
 import Projects from '@/pages/Projects'
 import CV from '@/pages/CV'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
-import { projects } from '@/data/projects'
+import { projects } from '../backend/src/data/projects'
 import NotFound from '@/pages/NotFound'
 
 describe('App', () => {

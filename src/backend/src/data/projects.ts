@@ -8,21 +8,21 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-      "id": "project1",
+      "id": "1",
       "name": "Simple Pomodoro App",
       "description": "A minimalistic pomodoro focus app built with react native + expo.",
       "tags": ["React", "TypeScript", "Expo", "React Native"],
       "github": "https://github.com/antondurov/pomodoro-app"
     },
     {
-      "id": "project2",
+      "id": "2",
       "name": "Recipe Manager (In Progress)",
       "description": "A minimalistic recipe manager app built with react native + expo.",
       "tags": ["React", "Typescript", "Expo", "React Native"],
       "github": "https://github.com/antondurov/recipe-manager"
     },
     {
-      "id": "Portofolio",
+      "id": "3",
       "name": "Portfolio",
       "description": "The portfolio you are currently viewing, built with React + TypeScript + Vite.",
       "tags": ["React", "TypeScript", "Vite", "React Router", "i18next"],

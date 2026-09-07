@@ -5,15 +5,16 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  envPrefix: ['VITE_', 'LOG_'],
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
+    setupFiles: './test/setup.ts',
     css: true,
   },
   resolve: {
     alias: {
-      '@': '/src',
+      '@': import.meta.dirname,
     }
   }
 })
