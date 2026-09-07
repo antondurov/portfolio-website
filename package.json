@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "bun run --cwd ./src/frontend test && bun run --cwd ./src/backend test",
-    "lint": "bun run --cwd ./src/frontend lint && bun run --cwd ./src/backend lint"
+    "lint": "bun run --cwd ./src/frontend lint && bun run --cwd ./src/backend lint",
+    "dev": "bun run --cwd ./src/frontend dev && bun run --cwd ./src/backend dev"
   },
   "workspaces": ["./src/backend", "./src/packages", "./src/frontend"],
   "devDependencies": {
