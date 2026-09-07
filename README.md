@@ -35,6 +35,9 @@ Run the following command to fetch and set up the environment variables:
 bun run setup:env
 ```
 
+### Public Link
+https://antondurov-portfolio.vercel.app
+
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
