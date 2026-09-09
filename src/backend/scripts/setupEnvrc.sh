@@ -92,7 +92,7 @@ fetch_secret() {
 
 echo "Fetching secrets from Apple Passwords..."
 
-: > "$ENVRC_PATH".tmp
+: > "$ENVRC_PATH"
 for var_name in "${!SECRETS[@]}"; do
   query="${SECRETS[$var_name]}"
   echo "  - $var_name  (keychain: $query)"

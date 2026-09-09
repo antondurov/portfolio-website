@@ -32,6 +32,17 @@ To set up the development environment, ensure you have access to:
 
 Run the following command to fetch and set up the environment variables:
 ```shell
+apw start
+```
+Select supported browser (you need the extension installed on it)
+
+Then:
+```shell
+apw auth
+```
+
+Then
+```shell
 bun run setup:env
 ```
 
