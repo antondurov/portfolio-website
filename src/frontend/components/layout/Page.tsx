@@ -3,7 +3,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 interface PageProps {
   eyebrow?: string;
   title: string;
-  intro?: string;
+  intro?: string | React.ReactNode;
   children?: React.ReactNode;
   align?: "left" | "center";
 }

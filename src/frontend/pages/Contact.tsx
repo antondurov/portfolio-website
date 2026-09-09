@@ -8,9 +8,16 @@ function Contact() {
 
   return (
     <Page
-      eyebrow="Get in touch"
+      eyebrow="Happy to talk"
       title={t("contact")}
-      intro="The fastest way to reach me is email — happy to talk music, code, or both."
+      intro={
+      <>
+      Whether you are an employer, 
+      developer, musician, or just someone who wants to say hi, 
+      feel free to reach out. <br/>
+      (fastest way is via instagram).
+      </>
+      }
     >
       <Panel>
         <KeyValueRow label="Email">
