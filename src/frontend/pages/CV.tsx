@@ -83,8 +83,9 @@ function CV() {
               </h3>
               <p className="mt-2 text-text-muted">
                 2 months and going, managing a shift of employees, 
-                overseeing daily operations including coffee making, time management, 
-                problem-solving, real time prioritization, and leadership skills. While 
+                overseeing daily operations, coffee making, time management, 
+                problem-solving, real time prioritization, 
+                store look, and leadership skills. While 
                 ensuring high-quality service and customer satisfaction.
               </p>
             </div>

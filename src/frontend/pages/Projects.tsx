@@ -13,9 +13,10 @@ function Projects({ projects }: ProjectsProps) {
 
   return (
     <Page
-      eyebrow="Work"
+      eyebrow="Programming"
       title={t("projects")}
-      intro="A few things I've built recently, mostly personal projects."
+      intro="Here are some of my personal projects, 
+      built with the goal of solving personal problems."
     >
       <ul className="grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
