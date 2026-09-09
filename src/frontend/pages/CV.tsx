@@ -7,9 +7,10 @@ function CV() {
   const { t } = useTranslation();
 
   return (
-    <Page eyebrow="Resume" title={t("cv")}>
+    <Page eyebrow="curriculum vitae" title={t("cv")}>
       <div className="space-y-8">
-        <Panel label="01 — Certifications">
+        <div id="certifications">
+        <Panel label="Certifications">
           <ul className="space-y-2">
             <li>
               <a
@@ -33,8 +34,9 @@ function CV() {
             </li>
           </ul>
         </Panel>
+        </div>
 
-        <Panel label="02 — Experience">
+        <Panel label="Experience">
           <div className="space-y-6">
             <div>
               <h3 className="font-display text-lg font-semibold">
@@ -44,7 +46,9 @@ function CV() {
                 7+ years of music production and audio engineering
                 experience, including mixing, mastering, and sound design.
                 Made countless remixes and original tracks, some of which
-                have been released on various record labels — see{" "}
+                have been released on various record labels and reched
+                millions of plays. <br/>
+                see{" "}
                 <a href="#accomplishments" className="text-accent hover:underline">
                   accomplishments
                 </a>{" "}
@@ -56,11 +60,11 @@ function CV() {
                 Software Development
               </h3>
               <p className="mt-2 text-text-muted">
-                Various personal projects, including web applications — see{" "}
+                Various personal projects, including web applications and 
+                the portfolio you are currently viewing. see{" "}
                 <a href="/projects" className="text-accent hover:underline">
                   projects
-                </a>
-                . Finished a variety of courses, see certificates above.
+                </a>.
               </p>
             </div>
             <div>
@@ -70,38 +74,76 @@ function CV() {
               <p className="mt-2 text-text-muted">
                 10 months of experience in human resources, including
                 employee relations and performance management, at a
-                government manufacturing facility.
+                government facility.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-lg font-semibold">
+                Shift Supervisor at Roladin - Current
+              </h3>
+              <p className="mt-2 text-text-muted">
+                2 months and going, managing a shift of employees, 
+                overseeing daily operations including coffee making, time management, 
+                problem-solving, real time prioritization, and leadership skills. While 
+                ensuring high-quality service and customer satisfaction.
               </p>
             </div>
           </div>
         </Panel>
 
-        <Panel label="03 — Education">
-          <p className="text-text-muted">
+        <Panel label="Education">
+          <p className="text">
             Finished 12 years of school, including high school, at the
             Democratic School Kanaf.
           </p>
+          <br/>
+              { 
+                // TO DO: ADD CLICKABLE LINK TO CERTIFICATES
+              }
+              <p className="text">
+                Finished a variety of courses, see certificates above.
+              </p>
         </Panel>
 
         <div id="accomplishments">
-          <Panel label="04 — Accomplishments">
+          <Panel label="Accomplishments | Software">
+            <div className="space-y-4 text-text-muted">
+              <p>
+                Developed a variety of personal projects, including web
+                applications and the portfolio you are currently viewing.
+              </p>
+              <p>
+                Completed the IBM Full Stack Software Developer
+                certification, which included a variety of projects and
+                assignments in web development, databases, and cloud
+                computing.
+              </p>
+              <p>
+                Completed the CS50x course from Harvard University, which
+                covered a variety of topics in computer science and
+                programming, including algorithms, data structures, and
+                web development.
+              </p>
+              <p>
+                Learned problem solving, time management, and 
+                critical thinking skills through various projects and assignments, 
+                as well as collaboration and communication skills through projects.
+              </p>
+            </div>
+            <div className="space-y-4 text-text-muted">
+            </div>
+          </Panel>
+          <Panel label="Accomplishments | Music">
             <div className="space-y-4 text-text-muted">
               <p>
                 First breakthrough came via TikTok in 2022, when my remix of
-                "Tek It" by Cafuné went viral — used in over 20,000 videos
+                "Tek It" by Cafuné went viral, used in over 20,000 videos
                 and reaching over 4 million streams on SoundCloud.
               </p>
               <p>
                 I went on to release more remixes and original tracks,
                 including hardstyle remixes like the "Tek It" remix, totaling
                 over 14 million streams on SoundCloud.
-              </p>
-              <p>
-                After moving on from hardstyle, I started releasing music
-                under a new identity, with a new sound and style. Currently
-                working on new tracks and planning to release them soon,
-                with the main focus on building a brand around this new
-                identity.
               </p>
             </div>
           </Panel>
