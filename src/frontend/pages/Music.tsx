@@ -2,7 +2,8 @@ import Page from "@/components/layout/Page";
 import Panel from "@/components/ui/Panel";
 import KeyValueRow from "@/components/ui/KeyValueRow";
 import LevelMeter from "@/components/ui/LevelMeter";
-import { musicData } from "@/data/musicData";
+import { musicData } from "../data/musicData";
+import RotatingText from "../components/ui/LoadingScreenText";
 
 type Song = {
   title: string;
@@ -46,6 +47,7 @@ function SongList({ title, songs }: { title: string; songs: Song[] }) {
   );
 }
 
+
 function ProfilePanel({ profile }: { profile: Profile }) {
   return (
     <Panel label={profile.name}>
@@ -70,23 +72,51 @@ function AboutPanel({ about }: { about: About }) {
   );
 }
 
-function MusicShowcase() {
-  const { antvn, toja, about } = musicData;
+function ComingSoon() {
+  return (
+    <div className="flex flex-col items-center justify-center space-y-4 rounded-[var(--radius-sm)] border border-line-strong bg-bg p-6 text-center">
+      <h3 className="font-display text-lg font-semibold">Coming Soon</h3>
+      <p className="text-text-muted">
+        <RotatingText />
+      </p>
+    </div>
+  )
+}
+
+function ComingSoonPage() {
 
   return (
     <Page
       eyebrow="Discography"
       title="Music"
-      intro="Tracks and remixes under my two aliases."
+      intro="My journey as a producer and artist over the years."
     >
       <div className="space-y-8">
+      {/* 
         <ProfilePanel profile={antvn} />
         <ProfilePanel profile={toja} />
         <LevelMeter seed={4} />
         <AboutPanel about={about} />
+      */}
+        <ComingSoon />
       </div>
     </Page>
   );
 }
 
-export default MusicShowcase;
+export function MusicShowcase() {
+  const { antvn, toja, about } = musicData;
+  return (
+    <Page
+      eyebrow="Discography"
+      title="Music"
+      intro="My journey as a producer and artist over the years."
+      >
+      <ProfilePanel profile={antvn} />
+      <ProfilePanel profile={toja} />
+      <LevelMeter seed={4} />
+      <AboutPanel about={about} />
+    </Page>
+  );
+}
+export default ComingSoonPage;
