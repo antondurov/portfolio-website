@@ -22,13 +22,13 @@ function Home() {
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
           to="/projects"
-          className="rounded-[var(--radius-sm)] border border-accent px-4 py-2 font-mono text-xs tracking-[0.1em] text-accent uppercase transition-colors hover:bg-accent hover:text-bg"
+          className="rounded-sm) border border-accent px-4 py-2 font-mono text-xs tracking-widest text-accent uppercase transition-colors hover:bg-accent hover:text-bg"
         >
           See the code
         </Link>
         <Link
           to="/music"
-          className="rounded-[var(--radius-sm)] border border-line-strong px-4 py-2 font-mono text-xs tracking-[0.1em] text-text-muted uppercase transition-colors hover:border-text-muted hover:text-text"
+          className="rounded-sm border border-line-strong px-4 py-2 font-mono text-xs tracking-widest text-text-muted uppercase transition-colors hover:border-text-muted hover:text-text"
         >
           Hear the music
         </Link>

@@ -12,7 +12,7 @@ interface PanelProps {
 function Panel({ children, label, className = "" }: PanelProps) {
   return (
     <div
-      className={`relative rounded-[var(--radius)] border border-line bg-panel ${className}`}
+      className={`relative rounded-(--radius) border border-line bg-panel ${className}`}
     >
       {label && (
         <div className="absolute -top-3 left-4 bg-bg px-2 font-mono text-[0.65rem] tracking-[0.15em] text-text-muted uppercase">

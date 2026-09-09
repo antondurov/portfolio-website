@@ -9,7 +9,7 @@ const resources = {
             "home": "Home",
             "about": "Me",
             "projects": "Projects",
-            "contact": "Contact",
+            "contact": "Contact Me",
             "cv": "CV",
             "more": "More",
             "not-found": "Page not found :(",

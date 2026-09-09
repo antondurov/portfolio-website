@@ -34,7 +34,7 @@ function SongList({ title, songs }: { title: string; songs: Song[] }) {
           <li key={index}>
             <span className="font-medium">{song.title}</span>
             <iframe
-              className="mt-2 w-full rounded-[var(--radius-sm)]"
+              className="mt-2 w-full rounded-sm"
               width="100%"
               height="150"
               src={song.soundcloudUrl}
@@ -74,7 +74,7 @@ function AboutPanel({ about }: { about: About }) {
 
 function ComingSoon() {
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 rounded-[var(--radius-sm)] border border-line-strong bg-bg p-6 text-center">
+    <div className="flex flex-col items-center justify-center space-y-4 rounded-sm border border-line-strong bg-bg p-6 text-center">
       <h3 className="font-display text-lg font-semibold">Coming Soon</h3>
       <p className="text-text-muted">
         <RotatingText />
