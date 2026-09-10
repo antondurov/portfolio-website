@@ -15,7 +15,7 @@ function Home() {
       </h1>
 
       <p className="mt-6 max-w-xl text-lg text-text-muted">
-        I make sounds and software. Based in Israel. <br/>
+        I make software and sounds on my laptop. Based in Israel. <br/>
         Building personal projects and writing music.
       </p>
 
