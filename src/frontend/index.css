@@ -120,6 +120,7 @@
     color: var(--accent);
     border: var(--accent) 1px solid;
     border-radius: var(--radius);
+    background-color: var(--panel);
   }
   
   .music-btn:hover {
