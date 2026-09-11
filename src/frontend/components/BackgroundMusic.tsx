@@ -51,7 +51,7 @@ export default function BackgroundMusic({
         aria-label="Toggle background music"
         className="music-btn fixed bottom-5 right-5 z-1000 px-4 py-2.5 text-xs shadow-md cursor-pointer transition-colors"
       >
-        {isPlaying ? "🔊 Pause Soundtrack" : "🔇 Play Soundtrack"}
+        {isPlaying ? "🔊 Pause Music" : "🔇 Play Music"}
       </button>
     </>
   );

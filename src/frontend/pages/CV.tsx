@@ -146,6 +146,12 @@ function CV() {
                 including hardstyle remixes like the "Tek It" remix, totaling
                 over 14 million streams on SoundCloud.
               </p>
+              <p>
+                Signed multiple records with various record labels, 
+                released on Spotify, Apple Music, and other platforms.
+                Continuing to develop my sound and grow as an artist, 
+                while also exploring new genres and styles.
+              </p>
             </div>
           </Panel>
         </div>
