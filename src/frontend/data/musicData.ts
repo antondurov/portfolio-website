@@ -23,4 +23,32 @@ export const musicData = {
       futureGoals: "I asprire to tell a story through my music, to create a unique sound that resonates with listeners and leaves a lasting impact.",
       philosophy: "Music is a universal language that can connect people from all walks of life. I believe in the power of music to evoke emotions, inspire change, and bring people together.",
     },
+    // Placeholder skeleton -- replace with real milestones (first DAW, first
+    // release, viral moments, label signings, etc.) once the page is ready.
+    timeline: [
+      {
+        year: "20XX",
+        title: "First milestone title",
+        description: "TODO: describe this milestone in the journey.",
+        tags: ["TODO"],
+      },
+      {
+        year: "20XX",
+        title: "Second milestone title",
+        description: "TODO: describe this milestone in the journey.",
+        tags: ["TODO"],
+      },
+      {
+        year: "20XX",
+        title: "Third milestone title",
+        description: "TODO: describe this milestone in the journey.",
+        tags: ["TODO"],
+      },
+      {
+        year: "20XX",
+        title: "Fourth milestone title",
+        description: "TODO: describe this milestone in the journey.",
+        tags: ["TODO"],
+      },
+    ],
   };
