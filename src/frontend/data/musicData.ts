@@ -25,30 +25,52 @@ export const musicData = {
     },
     // Placeholder skeleton -- replace with real milestones (first DAW, first
     // release, viral moments, label signings, etc.) once the page is ready.
+    // `track` is the representative track for that era, showcasing how the
+    // sound evolved year over year. Its audioSrc points at a file under
+    // public/music/timeline/ -- drop the matching audio file in there (Vite
+    // serves everything in `public/` from the site root, so
+    // public/music/timeline/foo.mp3 becomes the URL "/music/timeline/foo.mp3")
+    // and TrackPlayer will play it directly, no import needed.
     timeline: [
       {
         year: "20XX",
         title: "First milestone title",
         description: "TODO: describe this milestone in the journey.",
         tags: ["TODO"],
+        track: {
+          title: "TODO: representative track title",
+          audioSrc: "/music/clean%20house%20-%2019%may.mp3",
+        },
       },
       {
         year: "20XX",
         title: "Second milestone title",
         description: "TODO: describe this milestone in the journey.",
         tags: ["TODO"],
+        track: {
+          title: "TODO: representative track title",
+          audioSrc: "/music/timeline/02-second-milestone.mp3",
+        },
       },
       {
         year: "20XX",
         title: "Third milestone title",
         description: "TODO: describe this milestone in the journey.",
         tags: ["TODO"],
+        track: {
+          title: "TODO: representative track title",
+          audioSrc: "/music/timeline/03-third-milestone.mp3",
+        },
       },
       {
         year: "20XX",
         title: "Fourth milestone title",
         description: "TODO: describe this milestone in the journey.",
         tags: ["TODO"],
+        track: {
+          title: "TODO: representative track title",
+          audioSrc: "/music/timeline/04-fourth-milestone.mp3",
+        },
       },
     ],
   };

@@ -9,7 +9,7 @@ import { musicData } from "../data/musicData";
 
 type Song = {
   title: string;
-  soundcloudUrl: string;
+  soundcloudUrl?: string;
   audioSrc?: string;
 };
 
@@ -30,6 +30,8 @@ type TimelineEvent = {
   title: string;
   description: string;
   tags?: string[];
+  /** Representative track for this era, showcasing how the sound evolved. */
+  track?: Song;
 };
 
 function Timeline({ events }: { events: TimelineEvent[] }) {
@@ -56,6 +58,15 @@ function Timeline({ events }: { events: TimelineEvent[] }) {
                 {event.tags.map((tag) => (
                   <Tag key={tag}>{tag}</Tag>
                 ))}
+              </div>
+            )}
+            {event.track && (
+              <div className="mt-4">
+                <TrackPlayer
+                  title={event.track.title}
+                  audioSrc={event.track.audioSrc}
+                  externalUrl={event.track.soundcloudUrl}
+                />
               </div>
             )}
           </li>
