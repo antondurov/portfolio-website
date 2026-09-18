@@ -124,6 +124,16 @@ function AboutPanel({ about }: { about: About }) {
   );
 }
 
+function VolumeWarning() {
+  return (
+    <p className="border-l-2 border-danger bg-danger-dim/10 py-2 pl-4 text-sm text-text-muted">
+      The music tracks have different volume levels in the early years, be
+      careful before jumping from one track to the other. It is caused from
+      lack of mastering/leveling knowledge in early years.
+    </p>
+  );
+}
+
 function Music() {
   const { antvn, toja, about, timeline } = musicData;
 
@@ -134,6 +144,7 @@ function Music() {
       intro="My journey as a producer and artist over the years."
     >
       <div className="space-y-8">
+        <VolumeWarning />
         <TimelinePanel events={timeline} />
         <ProfilePanel profile={antvn} />
         <ProfilePanel profile={toja} />

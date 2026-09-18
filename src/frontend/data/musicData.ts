@@ -50,13 +50,13 @@ export const musicData = {
         ],
       },
       {
-        year: "20XX",
-        title: "Third milestone title",
-        description: "TODO: describe this milestone in the journey.",
+        year: "2019",
+        title: "Exploring, getting better and finding my sound",
+        description: "This year I started to explore different genres and sounds, (pop, r&b, lofi and more). I learned a lot about arranging and writing. I started to get better at making music in general, becoming more confident with different genres and styles. I started to experiment more and do whatever sounded good to me instead of sticking to a tutorial and copying 1-1 from it.",
         tracks: [
           {
-            title: "TODO: representative track title",
-            audioSrc: "/music/timeline/03-third-milestone.mp3",
+            title: "Cool bass housee - 2019 october",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Cool%20bass%20housee%20-%202019%20october-w2pYUohh3S8Nv8e9UJhJebQ5IMSxmg.wav",
           },
         ],
       },
