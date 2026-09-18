@@ -55,21 +55,83 @@ export const musicData = {
         description: "This year I started to explore different genres and sounds, (pop, r&b, lofi and more). I learned a lot about arranging and writing. I started to get better at making music in general, becoming more confident with different genres and styles. I started to experiment more and do whatever sounded good to me instead of sticking to a tutorial and copying 1-1 from it.",
         tracks: [
           {
+            title: "Project#6 - 2019 march",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Project%236%20-%202019%20march-iT6mSvoM1qNpKZaCZG8MKvJql3MRoR.wav",
+          },
+          {
             title: "Cool bass housee - 2019 october",
             audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Cool%20bass%20housee%20-%202019%20october-w2pYUohh3S8Nv8e9UJhJebQ5IMSxmg.wav",
+          },
+          {
+            title: "trap beato3qy59823 - 2019",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/trap%20beato3qy59823%20-%202019-MJpl1kEC9LHD7bphej7EAj90i9W8pm.wav",
+          }
+        ],
+      },
+      {
+        year: "2020",
+        title: "Who is Antun?",
+        description: "2020 and 2021. I started to enter remix contests to see how proffesional songs are getting produced piece by piece, while also practicing my production skills with quality vocals. I learned a lot about mixing and mastering, and how to make my own sounds (yet I still mainly used presets here). I started to get better at getting the ideas from head into the DAW. Uploaded my first remix to YouTube and starting to build a brand as the artist Antun (later renamed to ANTVN). I started to get more serious about music production and started to learn more about social media and promoting myself. These years are probably the biggest jump in quality and skill, since the COVID lockdowns gave me a lot of free time to learn and explore in music.",
+        tracks: [
+          {
+            title: "Antun - Tonsai - 2020 april",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Antun%20-%20Tonsai%20-%202020%20april-5sTotB7ZeA4Muas1u6yL95Oa7eZeKt.mp3",
+          },
+          {
+            title: "Antun - Heist Demo - 2020 may",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Antun%20-%20Heist%20Demo%20-%202020%20may-eV3slLTY8FphG8PjFtVlt4iEnKPvy4.mp3",
+          },
+          {
+            title: "Antun - End of Days (feat. Sergi Yaro) - 2020 september",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Antun%20-%20End%20of%20Days%20feat.%20Sergi%20Yaro%20-%202020%20september-hdbw1TLXVFYiOeSvPThjfTpE8pNa1D.mp3",
+          },
+          {
+            title: "Antun - Hold Me (DEMO) - 2020 november",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Antun%20-%20Hold%20Me%20%28DEMO%29%20-%202020%20november-7ugJMkDtPH7djOyeSIho6ZRbGEBElt.mp3",
           },
         ],
       },
       {
-        year: "20XX",
-        title: "Fourth milestone title",
-        description: "TODO: describe this milestone in the journey.",
+        year: "2021",
+        title: "",
+        description: "",
         tracks: [
           {
-            title: "TODO: representative track title",
-            audioSrc: "/music/timeline/04-fourth-milestone.mp3",
+            title: "Antun - Monster - 2021 april",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Antun%20-%20Monster%20-%202021%20april-HwV9UCEhyA5iYLCBGWos8Jb75acORF.mp3",
           },
-        ],
+          {
+            title: "Antun - Take Me Back - 2021 june",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Take%20Me%20Back%20-%202021%20june-4CxcQTBzCz0tgeJ0pBpff2UgYzlwgq.mp3",
+          },
+        ]
       },
+      {
+        year: "2022",
+        title: "Hardstyle era - ANTVN",
+        description: "I was already on TikTok for a while making gym content, that is when a TikTok trend started where people would remix popular songs into hardstyle. I decided to be the first in my country to join in on the trend, remixing popular local songs into hardstyle. I started to get a lot of attention and followers on TikTok, even hearing one of my remixes being played at a party I was at. I then decided to remix a song that blew up on TikTok (Tek it by Cafuné) into hardstyle, and it blew up on TikTok aswell, getting over 10 million plays on SoundCloud & YouTube. I kept remixing popular songs into hardstyle and reached millions of plays on SoundCloud and YouTube. I also decided to release 2 of my own original hardstyle songs (Take Part & Up / Down) on all platforms. Although the hardstyle era was fun and successful, I built a following that was interested only in my hardstyle remixes, and not in my original music. I decided to move away from hardstyle, which led to the end of ANTVN.",
+        tracks: [
+          {
+            title: "",
+            audioSrc: "",
+          },
+          {
+            title: "",
+            audioSrc: "",
+          },
+          {
+            title: "",
+            audioSrc: "",
+          },
+          {
+            title: "",
+            audioSrc: "",
+          },
+          {
+            title: "",
+            audioSrc: "",
+          },
+        ]
+      }
     ],
   };
