@@ -1,37 +1,70 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { playExclusively } from "@/lib/audioManager";
 
 interface TrackPlayerProps {
   title: string;
-  /** Direct audio file to play in-page. Leave unset until tracks are hosted. */
   audioSrc?: string;
-  /** Fallback link (e.g. SoundCloud) shown while no audioSrc is wired up. */
   externalUrl?: string;
 }
 
-/**
- * Skeleton for a self-hosted track player, replacing the old SoundCloud
- * iframe embeds. Plays audioSrc directly when provided; otherwise renders a
- * disabled control with a link out. Progress bar is a placeholder -- wire it
- * up to real playback position once audioSrc lands.
- */
+function formatTime(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs.toString().padStart(2, "0")}`;
+}
+
 function TrackPlayer({ title, audioSrc, externalUrl }: TrackPlayerProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    const onTimeUpdate = () => setCurrentTime(audio.currentTime);
+    const onLoadedMetadata = () => setDuration(audio.duration);
+    const onEnded = () => setCurrentTime(0);
+
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("timeupdate", onTimeUpdate);
+    audio.addEventListener("loadedmetadata", onLoadedMetadata);
+    audio.addEventListener("ended", onEnded);
+
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("timeupdate", onTimeUpdate);
+      audio.removeEventListener("loadedmetadata", onLoadedMetadata);
+      audio.removeEventListener("ended", onEnded);
+    };
+  }, [audioSrc]);
 
   function togglePlay() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (isPlaying) {
-      audio.pause();
+    if (audio.paused) {
+      playExclusively(audio).catch(() => {});
     } else {
-      audio.play();
+      audio.pause();
     }
-    setIsPlaying((prev) => !prev);
+  }
+
+  function handleSeek(event: React.ChangeEvent<HTMLInputElement>) {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.currentTime = Number(event.target.value);
+    setCurrentTime(audio.currentTime);
   }
 
   return (
-    <div className="flex items-center gap-4 rounded-(--radius-sm) border border-line bg-bg p-4">
+    <div className="flex items-center gap-4 rounded-sm border border-line bg-bg p-4">
       <button
         type="button"
         onClick={togglePlay}
@@ -44,9 +77,23 @@ function TrackPlayer({ title, audioSrc, externalUrl }: TrackPlayerProps) {
 
       <div className="min-w-0 flex-1">
         <p className="truncate font-medium">{title}</p>
-        {/* Placeholder progress track -- swap for real playback position later */}
-        <div className="mt-2 h-1 w-full rounded-full bg-line">
-          <div className="h-full w-0 rounded-full bg-accent" />
+        <div className="mt-2 flex items-center gap-2">
+          <input
+            type="range"
+            min={0}
+            max={duration || 0}
+            step={0.1}
+            value={currentTime}
+            onChange={handleSeek}
+            disabled={!audioSrc}
+            aria-label={`Seek ${title}`}
+            className="h-1 w-full accent-accent disabled:cursor-not-allowed disabled:opacity-40"
+          />
+          {audioSrc && (
+            <span className="shrink-0 font-mono text-[0.65rem] text-text-muted tabular-nums">
+              {formatTime(currentTime)} / {formatTime(duration)}
+            </span>
+          )}
         </div>
       </div>
 
@@ -62,7 +109,7 @@ function TrackPlayer({ title, audioSrc, externalUrl }: TrackPlayerProps) {
       )}
 
       {audioSrc && (
-        <audio ref={audioRef} src={audioSrc} onEnded={() => setIsPlaying(false)} />
+        <audio ref={audioRef} src={audioSrc} preload="metadata" />
       )}
     </div>
   );

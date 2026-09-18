@@ -40,12 +40,12 @@ export const musicData = {
         description: "I started learning how to use FL Studio since most of the YouTube tutorials I watched were using it. I began making my own songs, following and copying YouTube tutorials. I started to watch tutorials on how to make music like Martin Garrix, Avicii, Mesto and Brooks. This year is probably the biggest year for my music production journey, as I learned a lot and finished plenty of sounds. They weren't the best, there was still A LOT to learn. These are my oldest songs I could find, some of them are still on my old SoundCloud.",
         tracks: [
           {
-            title: "TODO: representative track title",
-            audioSrc: "/music/timeline/02-second-milestone.mp3",
+            title: "Anton Durov - Life Moments (original)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Anton%20Durov%20-%20Life%20Moments%20%28original%29-4svnGpincRti2aEfQJrmi4AZaXtmFZ.mp3",
           },
           {
-            title: "TODO: representative track title",
-            audioSrc: "/music/timeline/02-second-milestone.mp3",
+            title: "Anton Durov - Tropical Dreams (official)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Anton%20Durov%20-%20Tropical%20Dreams%20%28official%29-t6BuuPmwlGlWaAVmHGWJJNU3y53d16.mp3",
           },
         ],
       },
