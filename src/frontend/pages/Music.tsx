@@ -3,7 +3,6 @@ import Panel from "@/components/ui/Panel";
 import KeyValueRow from "@/components/ui/KeyValueRow";
 import LevelMeter from "@/components/ui/LevelMeter";
 import Eyebrow from "@/components/ui/Eyebrow";
-import Tag from "@/components/ui/Tag";
 import TrackPlayer from "@/components/ui/TrackPlayer";
 import { musicData } from "../data/musicData";
 
@@ -29,23 +28,22 @@ type TimelineEvent = {
   year: string;
   title: string;
   description: string;
-  tags?: string[];
-  /** Representative track for this era, showcasing how the sound evolved. */
-  track?: Song;
+  /** Representative tracks for this era, showcasing how the sound evolved. */
+  tracks?: Song[];
 };
 
 function Timeline({ events }: { events: TimelineEvent[] }) {
   return (
     <div className="relative pl-8">
       <div
-        className="absolute top-1 bottom-1 left-[5px] w-px bg-line-strong"
+        className="absolute top-1 bottom-1 left-1.25 w-px bg-line-strong"
         aria-hidden="true"
       />
       <ol className="space-y-10">
         {events.map((event, index) => (
           <li key={index} className="relative">
             <span
-              className="absolute top-1.5 -left-8 h-[11px] w-[11px] rounded-full border-2 border-accent bg-bg"
+              className="absolute top-1.5 -left-8 h-2.75 w-2.75 rounded-full border-2 border-accent bg-bg"
               aria-hidden="true"
             />
             <Eyebrow>{event.year}</Eyebrow>
@@ -53,20 +51,16 @@ function Timeline({ events }: { events: TimelineEvent[] }) {
               {event.title}
             </h3>
             <p className="mt-2 text-text-muted">{event.description}</p>
-            {event.tags && event.tags.length > 0 && (
-              <div className="mt-3 flex flex-wrap gap-2">
-                {event.tags.map((tag) => (
-                  <Tag key={tag}>{tag}</Tag>
+            {event.tracks && event.tracks.length > 0 && (
+              <div className="mt-4 space-y-3">
+                {event.tracks.map((track, trackIndex) => (
+                  <TrackPlayer
+                    key={trackIndex}
+                    title={track.title}
+                    audioSrc={track.audioSrc}
+                    externalUrl={track.soundcloudUrl}
+                  />
                 ))}
-              </div>
-            )}
-            {event.track && (
-              <div className="mt-4">
-                <TrackPlayer
-                  title={event.track.title}
-                  audioSrc={event.track.audioSrc}
-                  externalUrl={event.track.soundcloudUrl}
-                />
               </div>
             )}
           </li>

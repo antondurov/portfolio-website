@@ -23,54 +23,53 @@ export const musicData = {
       futureGoals: "I asprire to tell a story through my music, to create a unique sound that resonates with listeners and leaves a lasting impact.",
       philosophy: "Music is a universal language that can connect people from all walks of life. I believe in the power of music to evoke emotions, inspire change, and bring people together.",
     },
-    // Placeholder skeleton -- replace with real milestones (first DAW, first
-    // release, viral moments, label signings, etc.) once the page is ready.
-    // `track` is the representative track for that era, showcasing how the
-    // sound evolved year over year. Its audioSrc points at a file under
-    // public/music/timeline/ -- drop the matching audio file in there (Vite
-    // serves everything in `public/` from the site root, so
-    // public/music/timeline/foo.mp3 becomes the URL "/music/timeline/foo.mp3")
-    // and TrackPlayer will play it directly, no import needed.
     timeline: [
       {
-        year: "20XX",
-        title: "First milestone title",
-        description: "TODO: describe this milestone in the journey.",
-        tags: ["TODO"],
-        track: {
-          title: "TODO: representative track title",
-          audioSrc: "/music/clean%20house%20-%2019%may.mp3",
-        },
+        year: "Before 2017",
+        title: "Early musical interests",
+        description: "I was always interested in music. My mom is a music teacher, so I learned to play the piano, mostly learning to play covers of songs. I always enjoyed listening to music and exploring different genres, listening a lot to labels like NCS and Monstercat. Later on I discovered and binged covers of songs being played as a light show on the Launchpad, it was beautiful and I wanted to do something like that aswell.",
       },
       {
-        year: "20XX",
-        title: "Second milestone title",
-        description: "TODO: describe this milestone in the journey.",
-        tags: ["TODO"],
-        track: {
-          title: "TODO: representative track title",
-          audioSrc: "/music/timeline/02-second-milestone.mp3",
-        },
+        year: "2017",
+        title: "Discovering Music Production",
+        description: "My parents bought me a Launchpad Pro for my birthday, as I had been interested in playing it like the Launchpad covers on YouTube. I started learning how to use it and began experimenting with making my own light shows for songs I liked on Ableton. Later on I discovered I can make my own music with it, when someone from school showed me how to load drums and a piano on it and use it like an instrument. Unfortunately, I don't have any recordings of my first songs. I started off by making hip-hop and trap beats, they weren't good, but they are what made me fall in love with the proccess.",
+      },
+      {
+        year: "2018",
+        title: `Moving to FL Studio. First "real" songs`,
+        description: "I started learning how to use FL Studio since most of the YouTube tutorials I watched were using it. I began making my own songs, following and copying YouTube tutorials. I started to watch tutorials on how to make music like Martin Garrix, Avicii, Mesto and Brooks. This year is probably the biggest year for my music production journey, as I learned a lot and finished plenty of sounds. They weren't the best, there was still A LOT to learn. These are my oldest songs I could find, some of them are still on my old SoundCloud.",
+        tracks: [
+          {
+            title: "TODO: representative track title",
+            audioSrc: "/music/timeline/02-second-milestone.mp3",
+          },
+          {
+            title: "TODO: representative track title",
+            audioSrc: "/music/timeline/02-second-milestone.mp3",
+          },
+        ],
       },
       {
         year: "20XX",
         title: "Third milestone title",
         description: "TODO: describe this milestone in the journey.",
-        tags: ["TODO"],
-        track: {
-          title: "TODO: representative track title",
-          audioSrc: "/music/timeline/03-third-milestone.mp3",
-        },
+        tracks: [
+          {
+            title: "TODO: representative track title",
+            audioSrc: "/music/timeline/03-third-milestone.mp3",
+          },
+        ],
       },
       {
         year: "20XX",
         title: "Fourth milestone title",
         description: "TODO: describe this milestone in the journey.",
-        tags: ["TODO"],
-        track: {
-          title: "TODO: representative track title",
-          audioSrc: "/music/timeline/04-fourth-milestone.mp3",
-        },
+        tracks: [
+          {
+            title: "TODO: representative track title",
+            audioSrc: "/music/timeline/04-fourth-milestone.mp3",
+          },
+        ],
       },
     ],
   };
