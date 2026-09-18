@@ -25,9 +25,8 @@ bun lefthook install
 ```
 
 ### For Developing
-
 To set up the development environment, ensure you have access to:
-- `DATABASE_URL` and `API_KEY` in your Apple Password Manager.
+- `DATABASE_URL`, `API_KEY` and `BLOB_READ_WRITE_TOKEN` in your Apple Password Manager.
 - NOTE: This only works on Mac since Apple Passwords is apple native.
 
 Run the following command to fetch and set up the environment variables:
