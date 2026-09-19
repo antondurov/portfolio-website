@@ -112,24 +112,104 @@ export const musicData = {
         description: "I was already on TikTok for a while making gym content, that is when a TikTok trend started where people would remix popular songs into hardstyle. I decided to be the first in my country to join in on the trend, remixing popular local songs into hardstyle. I started to get a lot of attention and followers on TikTok, even hearing one of my remixes being played at a party I was at. I then decided to remix a song that blew up on TikTok (Tek it by Cafuné) into hardstyle, and it blew up on TikTok aswell, getting over 10 million plays on SoundCloud & YouTube. I kept remixing popular songs into hardstyle and reached millions of plays on SoundCloud and YouTube. I also decided to release 2 of my own original hardstyle songs (Take Part & Up / Down) on all platforms. Although the hardstyle era was fun and successful, I built a following that was interested only in my hardstyle remixes, and not in my original music. I decided to move away from hardstyle, which led to the end of ANTVN.",
         tracks: [
           {
-            title: "",
-            audioSrc: "",
+            title: "עד המדבר (ANTVN HARDSTYLE REMIX)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/%D7%A2%D7%93%20%D7%94%D7%9E%D7%93%D7%91%D7%A8%20%28ANTVN%20HARDSTYLE%20REMIX%29-uNN9jdd3tfNArrVPQgw3zgchAvVxRF.mp3",
           },
           {
-            title: "",
-            audioSrc: "",
+            title: "Tek It (ANTVN HARDSTYLE REMIX)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Cafune%CC%81%20-%20Tek%20It%20%28ANTVN%20BOOTLEG%29%20Hardstyle-dG0AXIIET6BBMZfiJFPLCBi5kQCkuF.mp3",
           },
           {
-            title: "",
-            audioSrc: "",
+            title: "Wild Ones (ANTVN HARDSTYLE REMIX)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Wild%20Ones%20_%20ANTVN%20HARDSTYLE-lS0iURFGoTbCvir0rq61c35dLHiRcy.mp3",
           },
           {
-            title: "",
-            audioSrc: "",
+            title: "ANTVN - Take Part",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Take%20Part-JZCYuC2Ai9S57ScnSDZlz1T1UrQX8G.mp3",
           },
           {
-            title: "",
-            audioSrc: "",
+            title: "ANTVN, SoundBassHigh - Falling 4U",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/ANTVN%2C%20SoundBassHigh%20-%20Falling%204U-WZM6cOa0X1Mj12Veo7jqsmnzKIsNRc.mp3",
+          },
+        ]
+      },
+      {
+        year: "2023",
+        title: `The end of ANTVN"`,
+        description: `2023 and 2024 - After a year of making mostly hardstyle and focusing on social media, I slowly got burned out. I wouldn't say I "decided", but I just lacked creativity and inspiration. I opened my DAW from time to time but nothing really would come out. There are original songs and remixes that I did finish but haven't released them, and there are also some pretty good ones that I did upload on my SoundCloud. I was gone from social media as an artist completely, I felt pressured to make something that would get views and likes, and not something that I would enjoy making. I mostly did remixes since I didn't have any ideas for original songs. That is when I decided to go back to my roots and what I truly loved.`,
+        tracks: [
+          {
+            title: "Running Out (ft. Bailey Flores) (ANTVN Remix)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/_FREE%20DOWNLOAD_%20Running%20Out%20%28ft.%20Bailey%20Flores%29%20%28ANTVN%20Remix%29%202023-wXWBatbb0iKTbXawUCalBZXAU5jLBl.mp3",
+          },
+          {
+            title: "Cohen - Shminiot (ANTVN EDIT) | כהן - שמיניות",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Cohen%20-%20Shminiot%20%28ANTVN%20EDIT%29%20_%20%D7%9B%D7%94%D7%9F%20-%20%D7%A9%D7%9E%D7%99%D7%A0%D7%99%D7%95%D7%AA%202023-JnWP3VMqTgWrYBKJ1SRlsObOaTkLMd.mp3",
+          },
+        ]
+      },
+      {
+        year: "2024",
+        title: "",
+        description: "",
+        tracks: [
+          {
+            title: "Let The World Burn | ANTVN Edit",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/LetTheWorldBurn%20%7C%20Toha%20Edit%202024-sietd9zduhI7F5gBzgSRDbTcG2L9Hg.wav",
+          },
+          {
+            title: "ANTVN - AВТОМАТ / MILITARY (feat. ЦИАНИД)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/%D0%90%D0%92%D0%A2%D0%9E%D0%9C%D0%90%D0%A2%20_%20MILITARY%20%28feat.%20%D0%A6%D0%98%D0%90%D0%9D%D0%98%D0%94%29%202024-KKxXDanoFiRnQZ27l621ucTr9zJqlq.mp3",
+          },
+        ]
+      },
+      {
+        year: "2025",
+        title: "Toja",
+        description: "Toja is the new project I started in 2025, after the break from ANTVN. I wanted to start a brand where I could make music not because there is some expectation from the audience, but because I truly enjoy making and playing it. Toja is a project where I can experiment with different sounds and styles. This same year I signed 2 records and uploaded a remix that got a lot of attention on SoundCloud and Hypeddit. This is where the creativity and inspirations started to come back as I let go of the pressure and took music as a hobby again, and not as a job.",
+        tracks: [
+          {
+            title: "Toja - Dollar Signs",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Toja%20-%20Dollar%20Signs-fddx49iK6jpWEW64FvYoyeCo0MDKJI.wav",
+          },
+          {
+            title: "Naarly - Addicted (feat. TIMID) | Toja Edit",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Naarly%20-%20Addicted%20%28feat.%20TIMID%29%20%7C%20Toja%20Edit-xERldOmxBHLHTIHsdgrPaCKVFhznN4.mp3",
+          },
+          {
+            title: "Toja - Love Tonight",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Love%20Tonight%209.4_3_Final_1-BBx88iq9qIkMoVHom9jZwaEpK4xKdh.wav",
+          },
+        ]
+      },
+      {
+        year: "2026",
+        title: "Today",
+        description: "Today I am still making music, I have a lot of strong ideas and I'm doing a lot of experiments with my sound. I am still learning and improving, and I am excited to see where my music journey will take me. Here are some remixes I did this year (and some exclusive demos)",
+        tracks: [
+          {
+            title: "Tinie tempah, Daecolm - Living Life (Toja Remix)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/livinglife_remix_final_toja-CLzfGhcSetQ9vBtpEYkjk0mUGRq3lM.wav",
+          },
+          {
+            title: "nephillm - ny2mia (Toja Edit)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/ny2mia-remix-19.5.26_2-83w2NKSD9TkvG4pXYEJNkBlxJYwTDe.wav",
+          },
+          {
+            title: "Zerb, Khalid - Faded Eyes (Toja Remix)",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/Faded_Eyes_Remix_Final-RyBQtqmMUfFEJtJVPRRnTEo02wLXeV.wav",
+          },
+          {
+            title: "Toja - ID 1",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/LOVE%20ME%20-%20Toja%20-REWQLEp2gEwKW8ByyTkYxsE9G8npyX.wav",
+          },
+          {
+            title: "Toja - ID 2",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/industrial%20flow-fIg1AJaiwDrPcUD2VGbzuQmubcFnQD.wav",
+          },
+          {
+            title: "Toja - ID 3",
+            audioSrc: "https://50z0bz1gzuxqlojy.public.blob.vercel-storage.com/music/OnMyMind-2.9.25-final1-Wwh1jah8gre7szoQYbn57O57adxwVO.wav",
           },
         ]
       }

@@ -1,6 +1,5 @@
 import Page from "@/components/layout/Page";
 import Panel from "@/components/ui/Panel";
-import KeyValueRow from "@/components/ui/KeyValueRow";
 import LevelMeter from "@/components/ui/LevelMeter";
 import Eyebrow from "@/components/ui/Eyebrow";
 import TrackPlayer from "@/components/ui/TrackPlayer";
@@ -10,18 +9,6 @@ type Song = {
   title: string;
   soundcloudUrl?: string;
   audioSrc?: string;
-};
-
-type Profile = {
-  name: string;
-  topSongs: Song[];
-  favorites: Song[];
-};
-
-type About = {
-  inspirations: string;
-  futureGoals: string;
-  philosophy: string;
 };
 
 type TimelineEvent = {
@@ -78,48 +65,34 @@ function TimelinePanel({ events }: { events: TimelineEvent[] }) {
   );
 }
 
-function SongList({ title, songs }: { title: string; songs: Song[] }) {
-  if (songs.length === 0) return null;
+function ThankYouPanel() {
   return (
-    <div>
-      <h3 className="font-mono text-xs tracking-[0.15em] text-text-muted uppercase">
-        {title}
-      </h3>
-      <ul className="mt-3 space-y-3">
-        {songs.map((song, index) => (
-          <li key={index}>
-            <TrackPlayer
-              title={song.title}
-              audioSrc={song.audioSrc}
-              externalUrl={song.soundcloudUrl}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function ProfilePanel({ profile }: { profile: Profile }) {
-  return (
-    <Panel label={profile.name}>
-      <div className="space-y-6">
-        <SongList title="Top Songs" songs={profile.topSongs} />
-        <SongList title="Personal Favorites" songs={profile.favorites} />
-        {profile.topSongs.length === 0 && profile.favorites.length === 0 && (
-          <p className="text-text-muted">Tracks coming soon.</p>
-        )}
-      </div>
+    <Panel>
+      <p>
+        Thank you for taking the time to listen to my music and read about my
+        journey as a producer and artist. Feel free to reach out to me on 
+        social media or via email if you have any questions, feedback, or 
+        just want to connect. I appreciate your support and hope you enjoyed
+        my journey!
+      </p>
     </Panel>
   );
 }
 
-function AboutPanel({ about }: { about: About }) {
+function AboutPagePanel() {
   return (
-    <Panel label="About the music">
-      <KeyValueRow label="Inspirations">{about.inspirations}</KeyValueRow>
-      <KeyValueRow label="Future goals">{about.futureGoals}</KeyValueRow>
-      <KeyValueRow label="Philosophy">{about.philosophy}</KeyValueRow>
+    <Panel label="Feedback">
+      <p>
+        This page is a work in progress. I am still working on adding more
+        content, including more tracks, stories, and insights into my music
+        journey. Please check back later for updates!
+      </p>
+      <br/>
+      <p>
+        If you have any feedback or suggestions for this page, please feel free
+        to reach out to me. I would love to hear your thoughts and ideas on how
+        to improve this page and make it more engaging for visitors.
+      </p>
     </Panel>
   );
 }
@@ -135,7 +108,7 @@ function VolumeWarning() {
 }
 
 function Music() {
-  const { antvn, toja, about, timeline } = musicData;
+  const { timeline } = musicData;
 
   return (
     <Page
@@ -146,10 +119,9 @@ function Music() {
       <div className="space-y-8">
         <VolumeWarning />
         <TimelinePanel events={timeline} />
-        <ProfilePanel profile={antvn} />
-        <ProfilePanel profile={toja} />
+        <ThankYouPanel />
         <LevelMeter seed={4} />
-        <AboutPanel about={about} />
+        <AboutPagePanel />
       </div>
     </Page>
   );
