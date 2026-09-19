@@ -45,7 +45,6 @@ function Timeline({ events }: { events: TimelineEvent[] }) {
                     key={trackIndex}
                     title={track.title}
                     audioSrc={track.audioSrc}
-                    externalUrl={track.soundcloudUrl}
                   />
                 ))}
               </div>

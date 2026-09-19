@@ -4,7 +4,6 @@ import { playExclusively } from "@/lib/audioManager";
 interface TrackPlayerProps {
   title: string;
   audioSrc?: string;
-  externalUrl?: string;
 }
 
 function formatTime(seconds: number) {
@@ -14,7 +13,7 @@ function formatTime(seconds: number) {
   return `${mins}:${secs.toString().padStart(2, "0")}`;
 }
 
-function TrackPlayer({ title, audioSrc, externalUrl }: TrackPlayerProps) {
+function TrackPlayer({ title, audioSrc }: TrackPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -96,17 +95,6 @@ function TrackPlayer({ title, audioSrc, externalUrl }: TrackPlayerProps) {
           )}
         </div>
       </div>
-
-      {!audioSrc && externalUrl && (
-        <a
-          href={externalUrl}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="shrink-0 font-mono text-[0.65rem] tracking-widest text-text-muted uppercase hover:text-accent"
-        >
-          Listen ↗
-        </a>
-      )}
 
       {audioSrc && (
         <audio ref={audioRef} src={audioSrc} preload="metadata" />
