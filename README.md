@@ -25,10 +25,10 @@ bun lefthook install
 ```
 
 ### For Developing
-
 To set up the development environment, ensure you have access to:
-- `DATABASE_URL` and `API_KEY` in your Apple Password Manager.
+- `DATABASE_URL`, `API_KEY` and `BLOB_READ_WRITE_TOKEN` in your Apple Password Manager.
 - NOTE: This only works on Mac since Apple Passwords is apple native.
+- `BLOB_READ_WRITE_TOKEN` is used for the Music page's audio storage (Vercel Blob) — see [Music](#music) below.
 
 Run the following command to fetch and set up the environment variables:
 ```shell
@@ -45,6 +45,15 @@ Then
 ```shell
 bun run setup:env
 ```
+
+### Music
+The Music page (`src/frontend/pages/Music.tsx`) plays tracks listed in `src/frontend/data/musicData.ts` through a `TrackPlayer` component. Only one track can play at a time across the page (enforced by `src/frontend/lib/audioManager.ts`).
+
+Audio files are hosted on [Vercel Blob](https://vercel.com/docs/storage/vercel-blob) rather than committed to the repo. To upload new tracks:
+```shell
+bun run --cwd ./src/backend upload:music <path-to-folder-of-songs>
+```
+This uploads every `.mp3`/`.wav` file in the given folder to Blob storage and prints the resulting URLs, which you then add to `musicData.ts`. Requires `BLOB_READ_WRITE_TOKEN` to be set (see [For Developing](#for-developing) above).
 
 ### Public Link
 https://antondurov-portfolio.vercel.app

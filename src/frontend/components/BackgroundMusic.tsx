@@ -1,4 +1,5 @@
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { playExclusively } from "@/lib/audioManager";
 
 interface BackgroundMusicProps {
   src: string;
@@ -21,13 +22,27 @@ export default function BackgroundMusic({
   }, [volume]);
 
   useEffect(() => {
-    if (autoPlay && audioRef.current) {
-      audioRef.current
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch(() => {
-          setIsPlaying(false);
-        });
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+    };
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (autoPlay && audio) {
+      playExclusively(audio).catch(() => {
+        // Autoplay blocked by the browser
+      });
     }
   }, [autoPlay]);
 
@@ -35,12 +50,11 @@ export default function BackgroundMusic({
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (isPlaying) {
-      audio.pause();
+    if (audio.paused) {
+      playExclusively(audio).catch((err) => console.warn("Playback blocked:", err));
     } else {
-      audio.play().catch((err) => console.warn("Playback blocked:", err));
+      audio.pause();
     }
-    setIsPlaying(!isPlaying);
   };
 
   return (

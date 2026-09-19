@@ -22,7 +22,9 @@ set -euo pipefail
 # --- Config: map env var name -> Keychain "site" query used by apw ------
 declare -A SECRETS=(
   [DATABASE_URL]="portfolio-database-url.com"
-  [API_KEY]="portfolio-api-key.com"
+  [API_KEY]="portfolio-api-key.com"\
+  ## SONGS = BLOB (vercel storage for song files)
+  [BLOB_READ_WRITE_TOKEN]="songs_read_write_token.com"
 )
 
 ENVRC_PATH=".envrc"

@@ -23,6 +23,8 @@
   --accent-dim: #0fbd63;
   --accent-2: #ff9a4d;
   --accent-2-dim: #8a5426;
+  --danger: #ff5c5c;
+  --danger-dim: #8a3232;
 
   /* Type */
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -47,6 +49,8 @@
   --color-accent-dim: var(--accent-dim);
   --color-accent-2: var(--accent-2);
   --color-accent-2-dim: var(--accent-2-dim);
+  --color-danger: var(--danger);
+  --color-danger-dim: var(--danger-dim);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-mono: var(--font-mono);
